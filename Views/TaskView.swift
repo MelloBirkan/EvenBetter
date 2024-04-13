@@ -15,7 +15,7 @@ struct TaskView: View {
         ZStack(alignment: .bottom) {
           RoundedRectangle(cornerRadius: 25)
             .ignoresSafeArea()
-            .frame(width: geometry.size.width, height: 90) // Adaptado para usar a largura disponível
+            .frame(width: geometry.size.width, height: 104) // Adaptado para usar a largura disponível
             .foregroundStyle(.mainRec)
           
           HStack {
@@ -49,7 +49,7 @@ struct TaskView: View {
 #Preview {
   let container = try! ModelContainer(for: TaskModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
   
-  container.mainContext.insert(TaskModel(title: "Tomar banho"))
+  container.mainContext.insert(TaskModel(title: "Tomar banho", summary: "", hour: Date.now))
   return TaskView()
     .modelContainer(container)
 }

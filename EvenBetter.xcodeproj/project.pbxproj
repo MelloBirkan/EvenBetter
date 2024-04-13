@@ -103,6 +103,7 @@
 		1B387EB12BC9BED00094A434 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
+				1B387EB42BC9BED00094A434 /* AddTaskView.swift */,
 				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
 				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
 				1B387EB02BC9BED00094A434 /* TaskRow.swift */,
@@ -124,13 +125,12 @@
 		1B387EB72BC9BED00094A434 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EC22BC9C4C60094A434 /* SerenityView.swift */,
-				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
-				1B387EC32BC9C4C60094A434 /* MeditationList.swift */,
-				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
 				1B387EB52BC9BED00094A434 /* ContentView.swift */,
 				1B387EB62BC9BED00094A434 /* TaskView.swift */,
-				1B387EB42BC9BED00094A434 /* AddTaskView.swift */,
+				1B387EC22BC9C4C60094A434 /* SerenityView.swift */,
+				1B387EC32BC9C4C60094A434 /* MeditationList.swift */,
+				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
+				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
 			);
 			name = Views;
 			path = ../Views;

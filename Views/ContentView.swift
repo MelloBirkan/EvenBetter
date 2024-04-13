@@ -16,6 +16,7 @@ struct ContentView: View {
     TabView {
       VStack {
         HeaderView()
+          .frame(height: 425)
         Spacer()
       }
         .tabItem {
