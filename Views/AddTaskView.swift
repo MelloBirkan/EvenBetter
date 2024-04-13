@@ -4,7 +4,7 @@
 //
 //  Created by Marcello Gonzatto Birkan on 10/04/24.
 //
-
+import SwiftData
 import SwiftUI
 
 struct AddTaskView: View {
@@ -64,7 +64,6 @@ struct AddTaskView: View {
       .toolbar {
         ToolbarItemGroup(placement: .navigationBarLeading) {
           Button("Cancel") {
-            
             dismiss()
           }
           .foregroundStyle(.red)

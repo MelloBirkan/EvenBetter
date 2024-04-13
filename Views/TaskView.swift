@@ -1,7 +1,3 @@
-//
-//  TaskView.swift
-//  MinimalTodo
-//
 //  Created by Marcello Gonzatto Birkan on 10/04/24.
 //
 
@@ -11,39 +7,42 @@ import SwiftData
 struct TaskView: View {
   @Query private var tasks: [TaskModel]
   @State var isPresented = false
+  @State var expandida = false
   
   var body: some View {
-    VStack {
-      ZStack(alignment: .top) {
-        RoundedRectangle(cornerRadius: 25)
-          .frame(width: 430, height: 139).ignoresSafeArea()
-          .foregroundStyle(.mainRec)
-        
-        HStack {
-          Text("Taréfas")
-            .font(.largeTitle)
-            .bold()
+    GeometryReader { geometry in
+      VStack {
+        ZStack(alignment: .bottom) {
+          RoundedRectangle(cornerRadius: 25)
+            .ignoresSafeArea()
+            .frame(width: geometry.size.width, height: 90) // Adaptado para usar a largura disponível
+            .foregroundStyle(.mainRec)
           
-          Spacer()
-          
-          AddTaskButton(isVisible: $isPresented)
+          HStack {
+            Text("Tarefas")
+              .font(.largeTitle)
+              .bold()
+            
+            Spacer()
+            
+            AddTaskButton(isVisible: $isPresented)
+          }
+          .padding()
         }
-        .padding()
-      }
-      
-      ForEach(tasks) { task in
-        TaskRow(title: task.taskTitle, summary: task.taskSummary, hour: task.taskHour, color: task.taskColor)
+        Text("Selecione uma das opções abaixo.")
         
-          .sheet(isPresented: $isPresented, content: {
-            AddTaskView()
-          })
+        ScrollView(showsIndicators: false) {
+          ForEach(tasks) { task in
+            TaskRow(task: task)
+          }
+        }
+        .padding(.bottom)
       }
-      Spacer()
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .sheet(isPresented: $isPresented, content: {
-        AddTaskView()
-      })
+      .frame(maxWidth: .infinity)
     }
+    .sheet(isPresented: $isPresented, content: {
+      AddTaskView()
+    })
   }
 }
 

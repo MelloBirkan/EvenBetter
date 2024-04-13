@@ -25,6 +25,7 @@
 		1B387ED12BC9C4C60094A434 /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC42BC9C4C60094A434 /* MeditationView.swift */; };
 		1B387ED42BC9C4C60094A434 /* PlaybackControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */; };
 		1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC82BC9C4C60094A434 /* PlayerView.swift */; };
+		1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		1B387EC42BC9C4C60094A434 /* MeditationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackControlButton.swift; sourceTree = "<group>"; };
 		1B387EC82BC9C4C60094A434 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		1B387EB32BC9BED00094A434 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1B387EDD2BCA36A20094A434 /* Extensions */,
 				1B387EDC2BC9CDE20094A434 /* TaskModels */,
 				1B387EDA2BC9C6CF0094A434 /* SerenityModels */,
 			);
@@ -148,6 +151,14 @@
 				1B387EB22BC9BED00094A434 /* TaskModel.swift */,
 			);
 			path = TaskModels;
+			sourceTree = "<group>";
+		};
+		1B387EDD2BCA36A20094A434 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 				1B387EB92BC9BED00094A434 /* TaskRow.swift in Sources */,
 				1B387EBD2BC9BED00094A434 /* TaskView.swift in Sources */,
 				1B387ECE2BC9C4C60094A434 /* MeditationOO.swift in Sources */,
+				1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
