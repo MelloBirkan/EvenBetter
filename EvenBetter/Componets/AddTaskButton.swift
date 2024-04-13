@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddTaskButton: View {
   @Binding var isVisible: Bool
+  
     var body: some View {
       Button(action: {
         isVisible.toggle()

@@ -5,8 +5,10 @@ import SwiftUI
 import SwiftData
 
 struct TaskView: View {
+  @Environment(\.modelContext) private var modelContext
   @Query private var tasks: [TaskModel]
   @State var isPresented = false
+  @State var isEditing = false
   @State var expandida = false
   
   var body: some View {
@@ -34,6 +36,14 @@ struct TaskView: View {
         ScrollView(showsIndicators: false) {
           ForEach(tasks) { task in
             TaskRow(task: task)
+            
+              .contextMenu(ContextMenu(menuItems: {
+                Button(action: {
+                  modelContext.delete(task)
+                }, label: {
+                  Label("Deletar", systemImage: "minus.circle.fill")
+                })
+              }))
           }
         }
         .padding(.bottom)
@@ -45,6 +55,7 @@ struct TaskView: View {
     })
   }
 }
+
 
 #Preview {
   let container = try! ModelContainer(for: TaskModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))

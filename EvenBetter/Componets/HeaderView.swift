@@ -51,7 +51,7 @@ struct HeaderView: View {
             .frame(width: geometry.size.width * 0.33, height: geometry.size.height * 0.43)
           
           Rectangle()
-            .foregroundStyle(.rightRec)
+            .foregroundStyle(.accent)
             .frame(width: geometry.size.width * 0.1, height: geometry.size.height)
             .clipShape(UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 0, bottomTrailing: 25, topTrailing: 0)))
         }
