@@ -12,7 +12,7 @@ struct TaskRow: View {
   let title: String
   let summary: String?
   let hour: Date
-  let color = Color.rightRec
+  let color: Color
   var expandida = false
   var isCompleted = false
   
@@ -71,5 +71,5 @@ struct TaskRow: View {
 }
 
 #Preview {
-  TaskRow(title: "Tomar banho", summary: "dsadasdasd", hour: Date())
+  TaskRow(title: "Tomar banho", summary: "dsadasdasd", hour: Date(), color: .accent)
 }

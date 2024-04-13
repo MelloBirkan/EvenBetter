@@ -102,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
-				1B387EB42BC9BED00094A434 /* AddTaskView.swift */,
 				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
 				1B387EB02BC9BED00094A434 /* TaskRow.swift */,
 				1B04BEB32BC5B47100E1EE79 /* HeaderView.swift */,
@@ -128,6 +127,7 @@
 				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
 				1B387EB52BC9BED00094A434 /* ContentView.swift */,
 				1B387EB62BC9BED00094A434 /* TaskView.swift */,
+				1B387EB42BC9BED00094A434 /* AddTaskView.swift */,
 			);
 			name = Views;
 			path = ../Views;

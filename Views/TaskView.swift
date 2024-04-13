@@ -32,7 +32,7 @@ struct TaskView: View {
       }
       
       ForEach(tasks) { task in
-        TaskRow(title: task.title, summary: task.summary, hour: task.hour)
+        TaskRow(title: task.taskTitle, summary: task.taskSummary, hour: task.taskHour, color: task.taskColor)
         
           .sheet(isPresented: $isPresented, content: {
             AddTaskView()
