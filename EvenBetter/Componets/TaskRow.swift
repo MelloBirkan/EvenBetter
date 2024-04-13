@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct TaskRow: View {
+  @Environment(\.colorScheme) var colorScheme
   let task: TaskModel
   @State var expandida = false
   
@@ -21,7 +22,7 @@ struct TaskRow: View {
         HStack(alignment: expandida ? .top : .center) {
           Rectangle()
             .clipShape(UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 18, bottomLeading: 18, bottomTrailing: 0, topTrailing: 0)))
-            .foregroundStyle(task.isCompleted ? Color.secondary : Color(task.color).darkened())
+            .foregroundStyle(task.isCompleted ? Color.secondary : colorScheme == .dark ? Color.text.opacity(0.8) : Color(task.color).darkened())
             .frame(width: 18)
           
           Image(systemName: task.isCompleted ? "checkmark.circle" : "circle.fill")

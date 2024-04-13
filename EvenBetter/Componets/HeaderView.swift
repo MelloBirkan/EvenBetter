@@ -42,7 +42,7 @@ struct HeaderView: View {
                         .frame(width: geometry.size.width * 0.33, height: geometry.size.height * 0.21)
                     
                     Rectangle()
-                        .foregroundStyle(.rightRec)
+                    .foregroundStyle(.accent)
                         .frame(width: geometry.size.width * 0.09, height: geometry.size.height * 0.5)
                 }
             }
