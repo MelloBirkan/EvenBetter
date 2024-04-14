@@ -11,6 +11,7 @@ import SwiftUI
 struct EditTaskView: View {
   @Environment(\.dismiss) var dismiss
   @Environment(\.modelContext) private var modelContext
+  @Environment(\.undoManager) var undoManager
   @Bindable var task: TaskModel
   
   var body: some View {
@@ -63,6 +64,9 @@ struct EditTaskView: View {
       .toolbar {
         ToolbarItemGroup(placement: .cancellationAction) {
           Button("Cancel") {
+            while undoManager?.canUndo == true {
+                undoManager?.undo()
+            }
             dismiss()
           }
           .foregroundStyle(.red)
