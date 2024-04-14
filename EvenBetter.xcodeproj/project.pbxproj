@@ -26,6 +26,7 @@
 		1B387ED42BC9C4C60094A434 /* PlaybackControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */; };
 		1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC82BC9C4C60094A434 /* PlayerView.swift */; };
 		1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */; };
+		1BF2406E2BCC09BA00467AAA /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackControlButton.swift; sourceTree = "<group>"; };
 		1B387EC82BC9C4C60094A434 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1B387EB42BC9BED00094A434 /* AddTaskView.swift */,
+				1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */,
 				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
 				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
 				1B387EB02BC9BED00094A434 /* TaskRow.swift */,
@@ -235,6 +238,7 @@
 				1B04BEB42BC5B47100E1EE79 /* HeaderView.swift in Sources */,
 				1B387ECF2BC9C4C60094A434 /* SerenityView.swift in Sources */,
 				1B04BEB22BC5B47100E1EE79 /* EvenBetterApp.swift in Sources */,
+				1BF2406E2BCC09BA00467AAA /* EditTaskView.swift in Sources */,
 				1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */,
 				1B387EBC2BC9BED00094A434 /* ContentView.swift in Sources */,
 				1B387EBB2BC9BED00094A434 /* AddTaskView.swift in Sources */,

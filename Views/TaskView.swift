@@ -10,6 +10,7 @@ struct TaskView: View {
   @State var isPresented = false
   @State var isEditing = false
   @State var expandida = false
+  @State var taskBeingEdited: TaskModel? // Modificado para armazenar a tarefa atual
   
   var body: some View {
     GeometryReader { geometry in
@@ -32,18 +33,26 @@ struct TaskView: View {
           .padding()
         }
         Text("Selecione uma das opções abaixo.")
-
+        
         ScrollView(showsIndicators: false) {
           ForEach(tasks) { task in
             TaskRow(task: task)
-            
               .contextMenu(ContextMenu(menuItems: {
+                Button(action: {
+                  taskBeingEdited = task // Atualiza a tarefa atual
+                }, label: {
+                  Label("Editar", systemImage: "pencil")
+                })
+                
                 Button(action: {
                   modelContext.delete(task)
                 }, label: {
                   Label("Deletar", systemImage: "minus.circle.fill")
                 })
               }))
+              .sheet(item: $taskBeingEdited, content: { task in
+                EditTaskView(task: task)
+              })
           }
         }
         .padding(.bottom)
