@@ -9,17 +9,22 @@ import SwiftData
 import SwiftUI
 
 struct EditTaskView: View {
-  @Environment(\.dismiss) var dismiss
-  @Environment(\.modelContext) private var modelContext
-  @Environment(\.undoManager) var undoManager
   @Bindable var task: TaskModel
   @State private var showCancelAlert = false
   @State private var showConfirmation = false
+  let isNew: Bool
+  
+  @Environment(\.dismiss) var dismiss
+  @Environment(\.modelContext) private var modelContext
+  @Environment(\.undoManager) var undoManager
+  
+  init(task: TaskModel, isNew: Bool = false) {
+    self.task = task
+    self.isNew = isNew
+  }
   
   var body: some View {
-    NavigationStack {
       VStack(alignment: .leading) {
-        
         Form {
           Section {
             TextField("Nome da tarefa", text: $task.title)
@@ -61,11 +66,11 @@ struct EditTaskView: View {
           }
         }
       }
-      .navigationTitle(task.title)
+      .navigationTitle(isNew ? "Nova Tarefa" : task.title)
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItemGroup(placement: .cancellationAction) {
-          Button("Cancel") {
+          Button("Cancelar") {
             showCancelAlert = true
           }
           .foregroundStyle(.red)
@@ -79,24 +84,30 @@ struct EditTaskView: View {
       }
       .interactiveDismissDisabled()
       .alert(isPresented: $showCancelAlert) {
-        Alert(title: Text("Cancelar alterações?"),
+        Alert(title: Text(isNew ? "Você tem certeza de que deseja cancelar a criação desta tarefa?"
+ : "Cancelar alterações?"),
               primaryButton: .destructive(Text("Sim")) {
-          while undoManager?.canUndo == true {
-            undoManager?.undo()
+          if isNew {
+            modelContext.delete(task)
+          } else {
+            while undoManager?.canUndo == true {
+              undoManager?.undo()
+            }
           }
           dismiss()
         },
               secondaryButton: .cancel(Text("Não")) {
         })
       }
-    }
     .tint(.rightRec)
   }
 }
 
 #Preview {
-  let container = try! ModelContainer(for: TaskModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
-  return EditTaskView(task: TaskModel())
-    .modelContainer(container)
+  NavigationStack {
+    EditTaskView(task: SampleData.shared.task)
+      .navigationBarTitleDisplayMode(.inline)
+  }
+  .modelContainer(SampleData.shared.modelContainer)
 }
 

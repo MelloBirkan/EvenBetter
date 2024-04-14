@@ -7,10 +7,8 @@ import SwiftData
 struct TaskView: View {
   @Environment(\.modelContext) private var modelContext
   @Query private var tasks: [TaskModel]
-  @State var isPresented = false
-  @State var isEditing = false
-  @State var expandida = false
-  @State var taskBeingEdited: TaskModel? // Modificado para armazenar a tarefa atual
+  @State private var newTask: TaskModel?
+  @State var taskBeingEdited: TaskModel?
   
   var body: some View {
     GeometryReader { geometry in
@@ -28,7 +26,7 @@ struct TaskView: View {
             
             Spacer()
             
-            AddTaskButton(isVisible: $isPresented)
+            AddTaskButton(action: addTask)
           }
           .padding()
         }
@@ -39,19 +37,23 @@ struct TaskView: View {
             TaskRow(task: task)
               .contextMenu(ContextMenu(menuItems: {
                 Button(action: {
-                  taskBeingEdited = task // Atualiza a tarefa atual
+                  taskBeingEdited = task
                 }, label: {
                   Label("Editar", systemImage: "pencil")
                 })
                 
                 Button(action: {
-                  modelContext.delete(task)
+                  withAnimation {
+                    modelContext.delete(task)
+                  }
                 }, label: {
                   Label("Deletar", systemImage: "minus.circle.fill")
                 })
               }))
               .sheet(item: $taskBeingEdited, content: { task in
-                EditTaskView(task: task)
+                NavigationStack {
+                  EditTaskView(task: task)
+                }
               })
           }
         }
@@ -59,9 +61,27 @@ struct TaskView: View {
       }
       .frame(maxWidth: .infinity)
     }
-    .sheet(isPresented: $isPresented, content: {
-      AddTaskView(task: TaskModel())
-    })
+    .sheet(item: $newTask) { task in
+      NavigationStack {
+        EditTaskView(task: task, isNew: true)
+      }
+      .interactiveDismissDisabled()
+    }
+  }
+  private func addTask() {
+    withAnimation {
+      let newItem = TaskModel()
+      modelContext.insert(newItem)
+      newTask = newItem
+    }
+  }
+  
+  private func deleteItems(offsets: IndexSet) {
+    withAnimation {
+      for index in offsets {
+        modelContext.delete(tasks[index])
+      }
+    }
   }
 }
 

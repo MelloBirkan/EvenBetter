@@ -14,7 +14,6 @@
 		1B387EB82BC9BED00094A434 /* AddTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */; };
 		1B387EB92BC9BED00094A434 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB02BC9BED00094A434 /* TaskRow.swift */; };
 		1B387EBA2BC9BED00094A434 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB22BC9BED00094A434 /* TaskModel.swift */; };
-		1B387EBB2BC9BED00094A434 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB42BC9BED00094A434 /* AddTaskView.swift */; };
 		1B387EBC2BC9BED00094A434 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB52BC9BED00094A434 /* ContentView.swift */; };
 		1B387EBD2BC9BED00094A434 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB62BC9BED00094A434 /* TaskView.swift */; };
 		1B387ECC2BC9C4C60094A434 /* ages-ago.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */; };
@@ -27,6 +26,7 @@
 		1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC82BC9C4C60094A434 /* PlayerView.swift */; };
 		1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */; };
 		1BF2406E2BCC09BA00467AAA /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */; };
+		1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240912BCC8B2200467AAA /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,6 @@
 		1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskButton.swift; sourceTree = "<group>"; };
 		1B387EB02BC9BED00094A434 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		1B387EB22BC9BED00094A434 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
-		1B387EB42BC9BED00094A434 /* AddTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		1B387EB52BC9BED00094A434 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B387EB62BC9BED00094A434 /* TaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ages-ago.mp3"; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		1B387EC82BC9C4C60094A434 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		1BF240912BCC8B2200467AAA /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,6 @@
 		1B387EB12BC9BED00094A434 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EB42BC9BED00094A434 /* AddTaskView.swift */,
 				1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */,
 				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
 				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
@@ -152,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1B387EB22BC9BED00094A434 /* TaskModel.swift */,
+				1BF240912BCC8B2200467AAA /* SampleData.swift */,
 			);
 			path = TaskModels;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				1BF2406E2BCC09BA00467AAA /* EditTaskView.swift in Sources */,
 				1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */,
 				1B387EBC2BC9BED00094A434 /* ContentView.swift in Sources */,
-				1B387EBB2BC9BED00094A434 /* AddTaskView.swift in Sources */,
+				1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */,
 				1B387ED02BC9C4C60094A434 /* MeditationList.swift in Sources */,
 				1B387ED12BC9C4C60094A434 /* MeditationView.swift in Sources */,
 				1B387EBA2BC9BED00094A434 /* TaskModel.swift in Sources */,
