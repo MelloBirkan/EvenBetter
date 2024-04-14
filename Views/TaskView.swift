@@ -67,7 +67,9 @@ struct TaskView: View {
       }
       .interactiveDismissDisabled()
     }
+    .navigationTitle("Tarefas")
   }
+  
   private func addTask() {
     withAnimation {
       let newItem = TaskModel()

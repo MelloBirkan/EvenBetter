@@ -30,7 +30,7 @@ struct ContentView: View {
         }
         .badge(tasks.count)
       
-      SerenityView()
+      MeditationList(OO: MeditationOO(meditation: MeditationDO.data))
         .tabItem {
           Label("Início", systemImage: "moon.stars.fill")
         }
