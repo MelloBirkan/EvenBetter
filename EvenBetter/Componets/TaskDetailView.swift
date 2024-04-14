@@ -8,12 +8,11 @@
 import SwiftData
 import SwiftUI
 
-struct EditTaskView: View {
+struct TaskDetailView: View {
   @Bindable var task: TaskModel
   @State private var showCancelAlert = false
   @State private var showConfirmation = false
   let isNew: Bool
-  
   @Environment(\.dismiss) var dismiss
   @Environment(\.modelContext) private var modelContext
   @Environment(\.undoManager) var undoManager
@@ -105,7 +104,7 @@ struct EditTaskView: View {
 
 #Preview {
   NavigationStack {
-    EditTaskView(task: SampleData.shared.task)
+    TaskDetailView(task: SampleData.shared.task)
       .navigationBarTitleDisplayMode(.inline)
   }
   .modelContainer(SampleData.shared.modelContainer)

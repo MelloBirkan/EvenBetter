@@ -52,7 +52,7 @@ struct TaskView: View {
               }))
               .sheet(item: $taskBeingEdited, content: { task in
                 NavigationStack {
-                  EditTaskView(task: task)
+                  TaskDetailView(task: task)
                 }
               })
           }
@@ -63,7 +63,7 @@ struct TaskView: View {
     }
     .sheet(item: $newTask) { task in
       NavigationStack {
-        EditTaskView(task: task, isNew: true)
+        TaskDetailView(task: task, isNew: true)
       }
       .interactiveDismissDisabled()
     }
@@ -87,9 +87,6 @@ struct TaskView: View {
 
 
 #Preview {
-  let container = try! ModelContainer(for: TaskModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
-  
-  container.mainContext.insert(TaskModel(title: "Tomar banho", summary: "", hour: Date.now))
-  return TaskView()
-    .modelContainer(container)
+  TaskView()
+    .modelContainer(SampleData.shared.modelContainer)
 }
