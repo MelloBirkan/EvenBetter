@@ -13,6 +13,8 @@ struct EditTaskView: View {
   @Environment(\.modelContext) private var modelContext
   @Environment(\.undoManager) var undoManager
   @Bindable var task: TaskModel
+  @State private var showCancelAlert = false
+  @State private var showConfirmation = false
   
   var body: some View {
     NavigationStack {
@@ -64,10 +66,7 @@ struct EditTaskView: View {
       .toolbar {
         ToolbarItemGroup(placement: .cancellationAction) {
           Button("Cancel") {
-            while undoManager?.canUndo == true {
-                undoManager?.undo()
-            }
-            dismiss()
+            showCancelAlert = true
           }
           .foregroundStyle(.red)
         }
@@ -77,6 +76,18 @@ struct EditTaskView: View {
           }
           .disabled(task.title.isEmpty)
         }
+      }
+      .interactiveDismissDisabled()
+      .alert(isPresented: $showCancelAlert) {
+        Alert(title: Text("Cancelar alterações?"),
+              primaryButton: .destructive(Text("Sim")) {
+          while undoManager?.canUndo == true {
+            undoManager?.undo()
+          }
+          dismiss()
+        },
+              secondaryButton: .cancel(Text("Não")) {
+        })
       }
     }
     .tint(.rightRec)
