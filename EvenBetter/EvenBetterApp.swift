@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct EvenBetterApp: App {
+  @StateObject var audioManager = AudioManager()
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .modelContainer(for: TaskModel.self)
+            .environmentObject(audioManager)
         }
     }
 }
