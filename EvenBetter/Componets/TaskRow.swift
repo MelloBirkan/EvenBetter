@@ -42,12 +42,17 @@ struct TaskRow: View {
             }
           
           VStack(alignment: .leading, spacing: 20) {
-            Text(task.title)
-              .offset(y: expandida ? 3 : 18)
-              .foregroundStyle(task.isCompleted ? Color.white : .text)
+            if task.summary == ""  {
+              Text(task.title)
+                .foregroundStyle(task.isCompleted ? Color.white : .text)
+            } else {
+              Text(task.title)
+                .offset(y: expandida ? 0 : 18)
+                .foregroundStyle(task.isCompleted ? Color.white : .text)
+            }
             
-            if task.summary != nil  {
-              Text(task.summary!)
+            if task.summary != ""  {
+              Text(task.summary)
                 .foregroundStyle(task.isCompleted ? Color.white : .text)
                 .padding(.leading)
                 
@@ -90,6 +95,6 @@ struct TaskRow: View {
   let container = try! ModelContainer(for: TaskModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
   
   container.mainContext.insert(TaskModel(title: "Tomar banho"))
-  return TaskRow(task: TaskModel(title: "Tomar Banho", summary: "Pegar Toalha"))
+  return TaskRow(task: TaskModel(title: "Tomar Banho", summary: "dasd"))
     .modelContainer(container)
 }

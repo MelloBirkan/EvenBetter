@@ -10,9 +10,7 @@ import SwiftUI
 struct AddTaskView: View {
   @Environment(\.dismiss) var dismiss
   @Environment(\.modelContext) private var modelContext
-  @State var taskTitle: String = ""
-  @State var taskDescription: String = ""
-  @State var taskHour: Date = Date.now
+  @Bindable var task: TaskModel
   
   var body: some View {
     NavigationStack {
@@ -20,7 +18,7 @@ struct AddTaskView: View {
         
         Form {
           Section {
-            TextField("Nome da tarefa", text: $taskTitle)
+            TextField("Nome da tarefa", text: $task.title)
             
           } header: {
             Text("Título")
@@ -29,7 +27,7 @@ struct AddTaskView: View {
           .headerProminence(.increased)
           
           Section {
-            TextField("Adicione uma descrição mais detalhada da tarefa", text: $taskDescription)
+            TextField("Adicione uma descrição mais detalhada da tarefa", text: $task.summary)
             
           } header: {
             Text("Descrição")
@@ -48,13 +46,13 @@ struct AddTaskView: View {
               
               Spacer()
               
-              Text("\(taskHour.formatted(.dateTime.hour().minute()))")
+              Text("\(task.hour.formatted(.dateTime.hour().minute()))")
                 .padding(10)
                 .background(.thinMaterial)
-                .animation(.easeOut, value: taskHour)
+                .animation(.easeOut, value: task.hour)
             }
             Divider()
-            DatePicker("", selection: $taskHour, displayedComponents: .hourAndMinute)
+            DatePicker("", selection: $task.hour, displayedComponents: .hourAndMinute)
               .datePickerStyle(.wheel)
           }
         }
@@ -70,11 +68,11 @@ struct AddTaskView: View {
         }
         ToolbarItemGroup(placement: .navigationBarTrailing) {
           Button("Adicionar") {
-            let task = TaskModel(title: taskTitle, summary: taskDescription, hour: taskHour)
+            let task = TaskModel(title: task.title, summary: task.summary, hour: task.hour)
             modelContext.insert(task)
             dismiss()
           }
-          .disabled(taskTitle.isEmpty)
+          .disabled(task.title.isEmpty)
         }
       }
     }
@@ -83,5 +81,5 @@ struct AddTaskView: View {
 }
 
 #Preview {
-  AddTaskView()
+  AddTaskView(task: TaskModel())
 }

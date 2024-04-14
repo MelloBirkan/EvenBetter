@@ -32,7 +32,7 @@ struct TaskView: View {
           .padding()
         }
         Text("Selecione uma das opções abaixo.")
-        
+
         ScrollView(showsIndicators: false) {
           ForEach(tasks) { task in
             TaskRow(task: task)
@@ -51,7 +51,7 @@ struct TaskView: View {
       .frame(maxWidth: .infinity)
     }
     .sheet(isPresented: $isPresented, content: {
-      AddTaskView()
+      AddTaskView(task: TaskModel())
     })
   }
 }
