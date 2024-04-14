@@ -82,8 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				1B04BEB12BC5B47100E1EE79 /* EvenBetterApp.swift */,
-				1B387EB32BC9BED00094A434 /* Models */,
-				1B387EB72BC9BED00094A434 /* Views */,
+				1B387EB52BC9BED00094A434 /* ContentView.swift */,
+				1B387EDA2BC9C6CF0094A434 /* Serenity */,
+				1B387EDC2BC9CDE20094A434 /* Task */,
+				1B387EDD2BCA36A20094A434 /* Extensions */,
 				1B387EB12BC9BED00094A434 /* Componets */,
 				1B04BEB52BC5B47300E1EE79 /* Assets.xcassets */,
 				1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */,
@@ -103,54 +105,29 @@
 		1B387EB12BC9BED00094A434 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
-				1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */,
-				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
-				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
-				1B387EB02BC9BED00094A434 /* TaskRow.swift */,
 				1B04BEB32BC5B47100E1EE79 /* HeaderView.swift */,
 			);
 			path = Componets;
 			sourceTree = "<group>";
 		};
-		1B387EB32BC9BED00094A434 /* Models */ = {
+		1B387EDA2BC9C6CF0094A434 /* Serenity */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EDD2BCA36A20094A434 /* Extensions */,
-				1B387EDC2BC9CDE20094A434 /* TaskModels */,
-				1B387EDA2BC9C6CF0094A434 /* SerenityModels */,
+				1BF240952BCC980F00467AAA /* Components */,
+				1BF240942BCC97F600467AAA /* Views */,
+				1BF240932BCC97E800467AAA /* Models */,
 			);
-			path = Models;
+			path = Serenity;
 			sourceTree = "<group>";
 		};
-		1B387EB72BC9BED00094A434 /* Views */ = {
+		1B387EDC2BC9CDE20094A434 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EB52BC9BED00094A434 /* ContentView.swift */,
-				1B387EB62BC9BED00094A434 /* TaskView.swift */,
-				1B387EC32BC9C4C60094A434 /* MeditationList.swift */,
-				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
-				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
+				1BF240982BCC985A00467AAA /* Components */,
+				1BF240972BCC983900467AAA /* Views */,
+				1BF240962BCC982A00467AAA /* Models */,
 			);
-			name = Views;
-			path = ../Views;
-			sourceTree = "<group>";
-		};
-		1B387EDA2BC9C6CF0094A434 /* SerenityModels */ = {
-			isa = PBXGroup;
-			children = (
-				1B387EC02BC9C4C60094A434 /* MeditationOO.swift */,
-				1B387EBF2BC9C4C60094A434 /* AudioManager.swift */,
-			);
-			path = SerenityModels;
-			sourceTree = "<group>";
-		};
-		1B387EDC2BC9CDE20094A434 /* TaskModels */ = {
-			isa = PBXGroup;
-			children = (
-				1B387EB22BC9BED00094A434 /* TaskModel.swift */,
-				1BF240912BCC8B2200467AAA /* SampleData.swift */,
-			);
-			path = TaskModels;
+			path = Task;
 			sourceTree = "<group>";
 		};
 		1B387EDD2BCA36A20094A434 /* Extensions */ = {
@@ -159,6 +136,60 @@
 				1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1BF240932BCC97E800467AAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EBF2BC9C4C60094A434 /* AudioManager.swift */,
+				1B387EC02BC9C4C60094A434 /* MeditationOO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BF240942BCC97F600467AAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
+				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
+				1B387EC32BC9C4C60094A434 /* MeditationList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BF240952BCC980F00467AAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1BF240962BCC982A00467AAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EB22BC9BED00094A434 /* TaskModel.swift */,
+				1BF240912BCC8B2200467AAA /* SampleData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BF240972BCC983900467AAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EB62BC9BED00094A434 /* TaskView.swift */,
+				1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BF240982BCC985A00467AAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
+				1B387EB02BC9BED00094A434 /* TaskRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

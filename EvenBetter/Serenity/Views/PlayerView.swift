@@ -61,7 +61,6 @@ struct PlayerView: View {
         if let player = audioManager.player {
           VStack(spacing: 5, content: {
             Slider(value: $value, in: 0...player.duration) { editing in
-              print("Editing", editing)
               isEditing = editing
               if !editing {
                 player.currentTime = value

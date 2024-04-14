@@ -12,11 +12,7 @@ final class AudioManager: ObservableObject {
 //    static let shared = AudioManager()
   
     var player: AVAudioPlayer?
-    @Published private(set) var isPlaying: Bool = false {
-        didSet {
-            print("isPlaying", isPlaying)
-        }
-    }
+    @Published private(set) var isPlaying: Bool = false
     @Published private(set) var isLooping: Bool = false
     
     func startPlayer(track: String, isPreview: Bool = false) {
@@ -70,6 +66,5 @@ final class AudioManager: ObservableObject {
         
         player.numberOfLoops = player.numberOfLoops == 0 ? -1 : 0
         isLooping = player.numberOfLoops != 0
-        print("isLooping", isLooping)
     }
 }
