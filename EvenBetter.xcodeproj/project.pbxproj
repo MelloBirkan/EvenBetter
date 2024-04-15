@@ -26,6 +26,7 @@
 		1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */; };
 		1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */; };
 		1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240912BCC8B2200467AAA /* SampleData.swift */; };
+		1BF2409A2BCD5AAC00467AAA /* MeditationDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240992BCD5AAC00467AAA /* MeditationDO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		1BF240912BCC8B2200467AAA /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		1BF240992BCD5AAC00467AAA /* MeditationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				1B387EBF2BC9C4C60094A434 /* AudioManager.swift */,
 				1B387EC02BC9C4C60094A434 /* MeditationOO.swift */,
+				1BF240992BCD5AAC00467AAA /* MeditationDO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */,
 				1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */,
 				1B387EBC2BC9BED00094A434 /* ContentView.swift in Sources */,
+				1BF2409A2BCD5AAC00467AAA /* MeditationDO.swift in Sources */,
 				1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */,
 				1B387ED02BC9C4C60094A434 /* MeditationList.swift in Sources */,
 				1B387ED12BC9C4C60094A434 /* MeditationView.swift in Sources */,
