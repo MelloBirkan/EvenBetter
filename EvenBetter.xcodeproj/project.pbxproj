@@ -115,9 +115,9 @@
 		1B387EDA2BC9C6CF0094A434 /* Serenity */ = {
 			isa = PBXGroup;
 			children = (
-				1BF240952BCC980F00467AAA /* Components */,
-				1BF240942BCC97F600467AAA /* Views */,
 				1BF240932BCC97E800467AAA /* Models */,
+				1BF240942BCC97F600467AAA /* Views */,
+				1BF240952BCC980F00467AAA /* Components */,
 			);
 			path = Serenity;
 			sourceTree = "<group>";
@@ -125,9 +125,9 @@
 		1B387EDC2BC9CDE20094A434 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				1BF240982BCC985A00467AAA /* Components */,
-				1BF240972BCC983900467AAA /* Views */,
 				1BF240962BCC982A00467AAA /* Models */,
+				1BF240972BCC983900467AAA /* Views */,
+				1BF240982BCC985A00467AAA /* Components */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -153,9 +153,9 @@
 		1BF240942BCC97F600467AAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
-				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
 				1B387EC32BC9C4C60094A434 /* MeditationList.swift */,
+				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
+				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeditationDO {
+struct MeditationDO: Identifiable {
   let id = UUID()
   let title: String
   let description: String
