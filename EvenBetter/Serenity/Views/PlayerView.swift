@@ -127,7 +127,7 @@ struct PlayerView: View {
 }
 
 #Preview {
-  return PlayerView(meditationDo: MeditationDO.data, isPreview: true)
+  return PlayerView(meditationDo: MeditationDO.sampleData, isPreview: true)
     .environmentObject(AudioManager())
 }
 

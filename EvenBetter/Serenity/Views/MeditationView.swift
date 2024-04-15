@@ -66,6 +66,6 @@ struct MeditationView: View {
 }
 
 #Preview {
-  MeditationView(meditation: MeditationDO.data)
+  MeditationView(meditation: MeditationDO.sampleData)
     .environmentObject(AudioManager())
 }

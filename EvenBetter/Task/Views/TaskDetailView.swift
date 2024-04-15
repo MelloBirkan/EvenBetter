@@ -27,6 +27,9 @@ struct TaskDetailView: View {
         Form {
           Section {
             TextField("Nome da tarefa", text: $task.title)
+              .onChange(of: task.title) {
+                task.title = String(task.title.trimmingPrefix(/^\s*/))
+              }
             
           } header: {
             Text("Título")
@@ -36,6 +39,9 @@ struct TaskDetailView: View {
           
           Section {
             TextField("Adicione uma descrição mais detalhada da tarefa", text: $task.summary)
+              .onChange(of: task.summary) {
+                task.summary = String(task.summary.trimmingPrefix(/^\s*/))
+              }
             
           } header: {
             Text("Descrição")
