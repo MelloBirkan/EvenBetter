@@ -24,4 +24,12 @@ final class TaskModel {
     self.hour = hour
     self.color = TaskModel.colors.randomElement()!
   }
+  
+  static let sampleData = [
+    TaskModel(title: "Tomar banho", summary: "Pegar toalha na varanda", hour: Date()),
+        TaskModel(title: "Estudar Swift", summary: "Revisar conceitos de Date e DateFormatter", hour: Date()),
+        TaskModel(title: "Fazer compras", summary: "Comprar leite, pão e ovos", hour: Date()),
+        TaskModel(title: "Ir à academia", summary: "", hour: Date()),
+        TaskModel(title: "Ler um livro", summary: "Capítulo 5 do livro de programação", hour: Date())
+  ]
 }

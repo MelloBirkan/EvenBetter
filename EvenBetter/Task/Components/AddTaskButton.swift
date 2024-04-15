@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct AddTaskButton: View {
-  @Binding var isVisible: Bool
-  
+  let action: () -> Void
     var body: some View {
       Button(action: {
-        isVisible.toggle()
+      action()
       }, label: {
         Image(systemName: "plus.circle.fill")
           .foregroundStyle(.text)
@@ -22,5 +21,7 @@ struct AddTaskButton: View {
 }
 
 #Preview {
-  AddTaskButton(isVisible: Binding.constant(false))
+  AddTaskButton {
+    ()
+  }
 }

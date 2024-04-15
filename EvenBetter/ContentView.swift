@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-  // Apenas para acessar a quantidade
   @Query private var tasks: [TaskModel]
   
   var body: some View {
@@ -30,7 +29,7 @@ struct ContentView: View {
         }
         .badge(tasks.count)
       
-      SerenityView()
+      MeditationList()
         .tabItem {
           Label("Início", systemImage: "moon.stars.fill")
         }

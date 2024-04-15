@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct MeditationView: View {
-  @State var meditationOO: MeditationOO
+  var meditation: MeditationDO
   @State private var showPlayer = false
   
     var body: some View {
       VStack(spacing: 0) {
-        
-        meditationOO.meditation.image
+        meditation.image
           .resizable()
           .scaledToFill()
           .frame(height: UIScreen.main.bounds.height / 1.2)
@@ -27,14 +26,14 @@ struct MeditationView: View {
             VStack(alignment: .leading, spacing: 8, content: {
               Text("Music")
               
-              Text(meditationOO.meditation.duration.formatted() + "S")
+              Text(meditation.duration.formatted() + "S")
             })
             .font(.subheadline)
             .textCase(.uppercase)
             .opacity(0.7)
             .foregroundStyle(.secondary)
             
-            Text(meditationOO.meditation.title)
+            Text(meditation.title)
               .font(.title)
             
             Button(action: {
@@ -49,7 +48,7 @@ struct MeditationView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
             })
             
-            Text(meditationOO.meditation.description)
+            Text(meditation.description)
             
             
             Spacer()
@@ -61,13 +60,12 @@ struct MeditationView: View {
       }
       .ignoresSafeArea()
       .fullScreenCover(isPresented: $showPlayer) {
-        PlayerView(OO: meditationOO)
+        PlayerView(meditationDo: meditation)
       }
     }
 }
 
 #Preview {
-  let meditationVM = MeditationOO(meditation: MeditationDO.data)
-  return MeditationView(meditationOO: meditationVM)
+  MeditationView(meditation: MeditationDO.sampleData)
     .environmentObject(AudioManager())
 }

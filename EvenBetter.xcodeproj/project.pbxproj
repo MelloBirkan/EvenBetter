@@ -14,19 +14,19 @@
 		1B387EB82BC9BED00094A434 /* AddTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */; };
 		1B387EB92BC9BED00094A434 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB02BC9BED00094A434 /* TaskRow.swift */; };
 		1B387EBA2BC9BED00094A434 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB22BC9BED00094A434 /* TaskModel.swift */; };
-		1B387EBB2BC9BED00094A434 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB42BC9BED00094A434 /* AddTaskView.swift */; };
 		1B387EBC2BC9BED00094A434 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB52BC9BED00094A434 /* ContentView.swift */; };
 		1B387EBD2BC9BED00094A434 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EB62BC9BED00094A434 /* TaskView.swift */; };
 		1B387ECC2BC9C4C60094A434 /* ages-ago.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */; };
 		1B387ECD2BC9C4C60094A434 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EBF2BC9C4C60094A434 /* AudioManager.swift */; };
 		1B387ECE2BC9C4C60094A434 /* MeditationOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC02BC9C4C60094A434 /* MeditationOO.swift */; };
-		1B387ECF2BC9C4C60094A434 /* SerenityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC22BC9C4C60094A434 /* SerenityView.swift */; };
 		1B387ED02BC9C4C60094A434 /* MeditationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC32BC9C4C60094A434 /* MeditationList.swift */; };
 		1B387ED12BC9C4C60094A434 /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC42BC9C4C60094A434 /* MeditationView.swift */; };
 		1B387ED42BC9C4C60094A434 /* PlaybackControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */; };
 		1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC82BC9C4C60094A434 /* PlayerView.swift */; };
 		1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */; };
-		1BF2406E2BCC09BA00467AAA /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */; };
+		1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */; };
+		1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240912BCC8B2200467AAA /* SampleData.swift */; };
+		1BF2409A2BCD5AAC00467AAA /* MeditationDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240992BCD5AAC00467AAA /* MeditationDO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,19 +38,19 @@
 		1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskButton.swift; sourceTree = "<group>"; };
 		1B387EB02BC9BED00094A434 /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		1B387EB22BC9BED00094A434 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
-		1B387EB42BC9BED00094A434 /* AddTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		1B387EB52BC9BED00094A434 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B387EB62BC9BED00094A434 /* TaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ages-ago.mp3"; sourceTree = "<group>"; };
 		1B387EBF2BC9C4C60094A434 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		1B387EC02BC9C4C60094A434 /* MeditationOO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationOO.swift; sourceTree = "<group>"; };
-		1B387EC22BC9C4C60094A434 /* SerenityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerenityView.swift; sourceTree = "<group>"; };
 		1B387EC32BC9C4C60094A434 /* MeditationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationList.swift; sourceTree = "<group>"; };
 		1B387EC42BC9C4C60094A434 /* MeditationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackControlButton.swift; sourceTree = "<group>"; };
 		1B387EC82BC9C4C60094A434 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		1BF240912BCC8B2200467AAA /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		1BF240992BCD5AAC00467AAA /* MeditationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				1B04BEB12BC5B47100E1EE79 /* EvenBetterApp.swift */,
-				1B387EB32BC9BED00094A434 /* Models */,
-				1B387EB72BC9BED00094A434 /* Views */,
+				1B387EB52BC9BED00094A434 /* ContentView.swift */,
+				1B387EDA2BC9C6CF0094A434 /* Serenity */,
+				1B387EDC2BC9CDE20094A434 /* Task */,
+				1BF2409B2BCD6E4700467AAA /* Protocols */,
+				1B387EDD2BCA36A20094A434 /* Extensions */,
 				1B387EB12BC9BED00094A434 /* Componets */,
 				1B04BEB52BC5B47300E1EE79 /* Assets.xcassets */,
 				1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */,
@@ -105,55 +108,29 @@
 		1B387EB12BC9BED00094A434 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EB42BC9BED00094A434 /* AddTaskView.swift */,
-				1BF2406D2BCC09BA00467AAA /* EditTaskView.swift */,
-				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
-				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
-				1B387EB02BC9BED00094A434 /* TaskRow.swift */,
 				1B04BEB32BC5B47100E1EE79 /* HeaderView.swift */,
 			);
 			path = Componets;
 			sourceTree = "<group>";
 		};
-		1B387EB32BC9BED00094A434 /* Models */ = {
+		1B387EDA2BC9C6CF0094A434 /* Serenity */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EDD2BCA36A20094A434 /* Extensions */,
-				1B387EDC2BC9CDE20094A434 /* TaskModels */,
-				1B387EDA2BC9C6CF0094A434 /* SerenityModels */,
+				1BF240932BCC97E800467AAA /* Models */,
+				1BF240942BCC97F600467AAA /* Views */,
+				1BF240952BCC980F00467AAA /* Components */,
 			);
-			path = Models;
+			path = Serenity;
 			sourceTree = "<group>";
 		};
-		1B387EB72BC9BED00094A434 /* Views */ = {
+		1B387EDC2BC9CDE20094A434 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				1B387EB52BC9BED00094A434 /* ContentView.swift */,
-				1B387EB62BC9BED00094A434 /* TaskView.swift */,
-				1B387EC22BC9C4C60094A434 /* SerenityView.swift */,
-				1B387EC32BC9C4C60094A434 /* MeditationList.swift */,
-				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
-				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
+				1BF240962BCC982A00467AAA /* Models */,
+				1BF240972BCC983900467AAA /* Views */,
+				1BF240982BCC985A00467AAA /* Components */,
 			);
-			name = Views;
-			path = ../Views;
-			sourceTree = "<group>";
-		};
-		1B387EDA2BC9C6CF0094A434 /* SerenityModels */ = {
-			isa = PBXGroup;
-			children = (
-				1B387EC02BC9C4C60094A434 /* MeditationOO.swift */,
-				1B387EBF2BC9C4C60094A434 /* AudioManager.swift */,
-			);
-			path = SerenityModels;
-			sourceTree = "<group>";
-		};
-		1B387EDC2BC9CDE20094A434 /* TaskModels */ = {
-			isa = PBXGroup;
-			children = (
-				1B387EB22BC9BED00094A434 /* TaskModel.swift */,
-			);
-			path = TaskModels;
+			path = Task;
 			sourceTree = "<group>";
 		};
 		1B387EDD2BCA36A20094A434 /* Extensions */ = {
@@ -162,6 +139,68 @@
 				1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1BF240932BCC97E800467AAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EBF2BC9C4C60094A434 /* AudioManager.swift */,
+				1B387EC02BC9C4C60094A434 /* MeditationOO.swift */,
+				1BF240992BCD5AAC00467AAA /* MeditationDO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BF240942BCC97F600467AAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EC32BC9C4C60094A434 /* MeditationList.swift */,
+				1B387EC42BC9C4C60094A434 /* MeditationView.swift */,
+				1B387EC82BC9C4C60094A434 /* PlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BF240952BCC980F00467AAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1BF240962BCC982A00467AAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EB22BC9BED00094A434 /* TaskModel.swift */,
+				1BF240912BCC8B2200467AAA /* SampleData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BF240972BCC983900467AAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EB62BC9BED00094A434 /* TaskView.swift */,
+				1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BF240982BCC985A00467AAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */,
+				1B387EB02BC9BED00094A434 /* TaskRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1BF2409B2BCD6E4700467AAA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,12 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B04BEB42BC5B47100E1EE79 /* HeaderView.swift in Sources */,
-				1B387ECF2BC9C4C60094A434 /* SerenityView.swift in Sources */,
 				1B04BEB22BC5B47100E1EE79 /* EvenBetterApp.swift in Sources */,
-				1BF2406E2BCC09BA00467AAA /* EditTaskView.swift in Sources */,
+				1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */,
 				1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */,
 				1B387EBC2BC9BED00094A434 /* ContentView.swift in Sources */,
-				1B387EBB2BC9BED00094A434 /* AddTaskView.swift in Sources */,
+				1BF2409A2BCD5AAC00467AAA /* MeditationDO.swift in Sources */,
+				1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */,
 				1B387ED02BC9C4C60094A434 /* MeditationList.swift in Sources */,
 				1B387ED12BC9C4C60094A434 /* MeditationView.swift in Sources */,
 				1B387EBA2BC9BED00094A434 /* TaskModel.swift in Sources */,
@@ -391,8 +430,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,8 +460,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

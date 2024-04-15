@@ -10,7 +10,7 @@ import SwiftUI
 struct PlayerView: View {
   @Environment(\.dismiss) var dismiss
   @EnvironmentObject var audioManager: AudioManager
-  var OO: MeditationOO
+  let meditationDo: MeditationDO
   var isPreview = false
   @State private var value = 0.0
   @State private var isEditing: Bool = false
@@ -20,7 +20,7 @@ struct PlayerView: View {
   
   var body: some View {
     ZStack {
-      OO.meditation.image
+      meditationDo.image
         .resizable()
         .aspectRatio(contentMode: .fill)
         .frame(width: UIScreen.main.bounds.width)
@@ -46,7 +46,7 @@ struct PlayerView: View {
           Spacer()
         }
         
-        Text(OO.meditation.title)
+        Text(meditationDo.title)
           .font(.title)
           .foregroundStyle(.white) // Possivel mudança de cor
           .background(
@@ -61,7 +61,6 @@ struct PlayerView: View {
         if let player = audioManager.player {
           VStack(spacing: 5, content: {
             Slider(value: $value, in: 0...player.duration) { editing in
-              print("Editing", editing)
               isEditing = editing
               if !editing {
                 player.currentTime = value
@@ -118,7 +117,7 @@ struct PlayerView: View {
       .padding(20)
     }
     .onAppear {
-      audioManager.startPlayer(track: OO.meditation.track, isPreview: isPreview)
+      audioManager.startPlayer(track: meditationDo.track, isPreview: isPreview)
     }
     .onReceive(timer) { _ in
       guard let player = audioManager.player, !isEditing else { return }
@@ -128,8 +127,7 @@ struct PlayerView: View {
 }
 
 #Preview {
-  let meditationOO = MeditationOO(meditation: MeditationDO.data)
-  return PlayerView(OO: meditationOO, isPreview: true)
+  return PlayerView(meditationDo: MeditationDO.sampleData, isPreview: true)
     .environmentObject(AudioManager())
 }
 

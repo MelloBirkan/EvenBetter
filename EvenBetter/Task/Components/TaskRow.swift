@@ -92,9 +92,6 @@ struct TaskRow: View {
 
 
 #Preview {
-  let container = try! ModelContainer(for: TaskModel.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
-  
-  container.mainContext.insert(TaskModel(title: "Tomar banho"))
-  return TaskRow(task: TaskModel(title: "Tomar Banho", summary: "dasd"))
-    .modelContainer(container)
+  return TaskRow(task: SampleData.shared.task)
+    .modelContainer(SampleData.shared.modelContainer)
 }
