@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MeditationList: View {
-  let meditations: MeditationOO = MeditationOO()
+  @State var meditations: MeditationOO = MeditationOO()
   
   var body: some View {
     NavigationStack {
