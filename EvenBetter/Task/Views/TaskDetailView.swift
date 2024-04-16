@@ -82,6 +82,7 @@ struct TaskDetailView: View {
         }
         ToolbarItemGroup(placement: .confirmationAction) {
           Button("Salvar") {
+            modelContext.insert(task)
             dismiss()
           }
           .disabled(task.title.isEmpty)

@@ -36,6 +36,7 @@ struct TaskView: View {
         ScrollView(showsIndicators: false) {
           ForEach(tasks) { task in
             TaskRow(task: task)
+            
               .contextMenu(ContextMenu(menuItems: {
                 Button(action: {
                   taskBeingEdited = task
@@ -73,9 +74,8 @@ struct TaskView: View {
   
   private func addTask() {
     withAnimation {
-      let newItem = TaskModel()
-      modelContext.insert(newItem)
-      newTask = newItem
+      newTask = TaskModel()
+//      newTask = newItem
     }
   }
   
