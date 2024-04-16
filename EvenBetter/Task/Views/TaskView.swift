@@ -11,6 +11,7 @@ struct TaskView: View {
   @State var taskBeingEdited: TaskModel?
   
   var body: some View {
+    
     GeometryReader { geometry in
       VStack {
         ZStack(alignment: .bottom) {
