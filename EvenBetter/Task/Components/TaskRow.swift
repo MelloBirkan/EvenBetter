@@ -16,6 +16,7 @@ struct TaskRow: View {
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: 18)
+        .shadow(radius: 10)
         .foregroundStyle(task.isCompleted ? Color.secondary : Color(task.color))
       
       VStack {
