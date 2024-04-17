@@ -88,6 +88,7 @@ struct TaskDetailView: View {
           .disabled(task.title.isEmpty)
         }
       }
+      .tint(.accent)
       .interactiveDismissDisabled()
       .alert(isPresented: $showCancelAlert) {
         Alert(title: Text(isNew ? "Você tem certeza de que deseja cancelar a criação desta tarefa?"
@@ -105,7 +106,7 @@ struct TaskDetailView: View {
               secondaryButton: .cancel(Text("Não")) {
         })
       }
-    .tint(.rightRec)
+    .tint(.accent)
   }
 }
 

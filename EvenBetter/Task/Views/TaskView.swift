@@ -58,6 +58,7 @@ struct TaskView: View {
                 }
               })
           }
+          .padding(.vertical)
           .frame(maxWidth: .infinity)
         }
         .padding(.bottom)
