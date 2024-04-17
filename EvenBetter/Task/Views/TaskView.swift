@@ -11,7 +11,7 @@ struct TaskView: View {
   @State var taskBeingEdited: TaskModel?
   
   var body: some View {
-    
+    // MARK: Header
     GeometryReader { geometry in
       VStack {
         ZStack(alignment: .bottom) {
@@ -33,6 +33,7 @@ struct TaskView: View {
         }
         Text("Selecione uma das opções abaixo.")
         
+        // MARK: Tasks
         ScrollView(showsIndicators: false) {
           ForEach(tasks) { task in
             TaskRow(task: task)
@@ -77,7 +78,6 @@ struct TaskView: View {
   private func addTask() {
     withAnimation {
       newTask = TaskModel()
-//      newTask = newItem
     }
   }
   

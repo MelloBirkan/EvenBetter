@@ -74,7 +74,7 @@ struct TaskRow: View {
               .fontWeight(.semibold)
               .padding(.leading)
               .contentTransition(.symbolEffect)
-              .animation(.bouncy, value: expandida)
+//              .animation(.bouncy, value: expandida)
           }
           .padding(.top, expandida ? 20 : 0)
           .padding(.trailing)
@@ -82,7 +82,7 @@ struct TaskRow: View {
       }
     }
     .onTapGesture {
-      withAnimation(.spring()) {
+      withAnimation(.spring(duration: 0.1)) {
         expandida.toggle()
       }
     }
