@@ -58,7 +58,7 @@ struct TaskRow: View {
                 .padding(.leading)
                 
                 .opacity(expandida ? 1 : 0)
-                .animation(.easeOut, value: expandida)
+                .animation(.easeInOut, value: expandida)
             }
           }
           .padding(.top, expandida ? 25 : 0)
@@ -74,7 +74,7 @@ struct TaskRow: View {
               .fontWeight(.semibold)
               .padding(.leading)
               .contentTransition(.symbolEffect)
-//              .animation(.bouncy, value: expandida)
+              .animation(.spring, value: expandida)
           }
           .padding(.top, expandida ? 20 : 0)
           .padding(.trailing)
@@ -82,17 +82,17 @@ struct TaskRow: View {
       }
     }
     .onTapGesture {
-      withAnimation(.spring(duration: 0.1)) {
+      withAnimation(.spring) {
         expandida.toggle()
       }
     }
     .frame(width: 382, height: expandida ? 198 : 71)
+    .id(task.id)
   }
 }
-
-
 
 #Preview {
   return TaskRow(task: SampleData.shared.task)
     .modelContainer(SampleData.shared.modelContainer)
 }
+
