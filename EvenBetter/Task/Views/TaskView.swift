@@ -66,6 +66,7 @@ struct TaskView: View {
       }
       .frame(maxWidth: .infinity)
     }
+    .background(Color.BG)
     .sheet(item: $newTask) { task in
       NavigationStack {
         TaskDetailView(task: task, isNew: true)
