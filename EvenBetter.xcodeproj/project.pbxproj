@@ -62,6 +62,7 @@
 		1B5759362BD1BC6200423F15 /* MoodOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodOO.swift; sourceTree = "<group>"; };
 		1B5759382BD1D8F400423F15 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		1B57593A2BD1DABB00423F15 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		1B57593C2BD1DE8C00423F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		1BF240912BCC8B2200467AAA /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		1BF240992BCD5AAC00467AAA /* MeditationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDO.swift; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		1B04BEB02BC5B47100E1EE79 /* EvenBetter */ = {
 			isa = PBXGroup;
 			children = (
+				1B57593C2BD1DE8C00423F15 /* Info.plist */,
 				1B04BEB12BC5B47100E1EE79 /* EvenBetterApp.swift */,
 				1B387EB52BC9BED00094A434 /* ContentView.swift */,
 				1B57592C2BD1A06F00423F15 /* EvenBetter */,
@@ -487,6 +489,7 @@
 				DEVELOPMENT_TEAM = PGPC7U357H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EvenBetter/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -500,7 +503,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.2;
+				MARKETING_VERSION = 0.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -520,6 +523,7 @@
 				DEVELOPMENT_TEAM = PGPC7U357H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EvenBetter/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -533,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.2;
+				MARKETING_VERSION = 0.4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
