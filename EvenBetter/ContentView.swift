@@ -13,13 +13,7 @@ struct ContentView: View {
   
   var body: some View {
     TabView {
-      NavigationStack {
-        VStack {
-          HeaderView()
-            .frame(height: 325)
-          Spacer()
-        }
-      }
+      MoodView()
         .tabItem {
           Label("Início", systemImage: "house.fill")
       
