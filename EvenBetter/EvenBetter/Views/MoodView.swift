@@ -32,7 +32,7 @@ struct MoodView: View {
               .padding(.top, -50)
             
             if (moodSelected != nil) {
-              NavigationLink(destination: ContentView()) {
+              NavigationLink(destination: ChallengeView()) {
                 Text("Continuar")
                   .bold()
                   .foregroundStyle(.text)
