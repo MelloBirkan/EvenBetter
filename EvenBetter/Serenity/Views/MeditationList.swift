@@ -11,33 +11,39 @@ struct MeditationList: View {
   @State var meditations: MeditationOO = MeditationOO()
   
   var body: some View {
-    NavigationStack {
-      VStack(alignment: .leading) {
-        HeaderView(informationIsVisible: false).frame(height: 5)
-        Text("Selecione uma das opções abaixo.")
-          .foregroundStyle(.text)
-          .padding([.top, .leading])
-        
-        ScrollView(showsIndicators: false){
-          LazyVGrid(columns: [GridItem(), GridItem()], content: {
-            ForEach(meditations.meditations) { meditation in
-              NavigationLink(destination: MeditationView(meditation: meditation)) {
-                MeditationCard(image: meditation.image, title: meditation.title)
-              }
+    GeometryReader { geometry in
+      NavigationStack {
+        VStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 25)
+              .ignoresSafeArea()
+              .frame(width: geometry.size.width, height: geometry.size.height / 104) // Adaptado para usar a largura disponível
+              .foregroundStyle(.rightRec)
+            
+            Text("Selecione uma das opções abaixo.")
+              .foregroundStyle(.text)
+              .padding([.top, .leading])
+            
+            ScrollView(showsIndicators: false){
+              LazyVGrid(columns: [GridItem(), GridItem()], content: {
+                ForEach(meditations.meditations) { meditation in
+                  NavigationLink(destination: MeditationView(meditation: meditation)) {
+                    MeditationCard(image: meditation.image, title: meditation.title)
+                  }
+                }
+              })
+              .padding()
             }
-          })
-          .padding()
+          Spacer()
+            .navigationTitle("Meditações")
+        }
+        .tint(.accent)
+        .onAppear(perform: {
+          meditations.fetch()
+        })
+        .refreshable {
+          meditations.fetch()
         }
       }
-      Spacer()
-      .navigationTitle("Meditações")
-    }
-    .tint(.accent)
-    .onAppear(perform: {
-      meditations.fetch()
-    })
-    .refreshable {
-      meditations.fetch()
     }
   }
 }

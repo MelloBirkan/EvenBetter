@@ -16,7 +16,7 @@ struct MeditationView: View {
         meditation.image
           .resizable()
           .scaledToFill()
-          .frame(height: UIScreen.main.bounds.height / 1.2)
+//          .frame(height: UIScreen.main.bounds.height / 1.2)
         
         ZStack {
           Color(.BG)

@@ -25,6 +25,10 @@
 		1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC82BC9C4C60094A434 /* PlayerView.swift */; };
 		1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */; };
 		1B5759202BCF3AA100423F15 /* MeditationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57591F2BCF3AA100423F15 /* MeditationCard.swift */; };
+		1B57592E2BD1A0A200423F15 /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57592D2BD1A0A200423F15 /* MoodView.swift */; };
+		1B5759322BD1A29E00423F15 /* MoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5759312BD1A29E00423F15 /* MoodCard.swift */; };
+		1B5759342BD1A30000423F15 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5759332BD1A30000423F15 /* Mood.swift */; };
+		1B5759372BD1BC6200423F15 /* MoodOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5759362BD1BC6200423F15 /* MoodOO.swift */; };
 		1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */; };
 		1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240912BCC8B2200467AAA /* SampleData.swift */; };
 		1BF2409A2BCD5AAC00467AAA /* MeditationDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240992BCD5AAC00467AAA /* MeditationDO.swift */; };
@@ -50,6 +54,10 @@
 		1B387EC82BC9C4C60094A434 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		1B57591F2BCF3AA100423F15 /* MeditationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCard.swift; sourceTree = "<group>"; };
+		1B57592D2BD1A0A200423F15 /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
+		1B5759312BD1A29E00423F15 /* MoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCard.swift; sourceTree = "<group>"; };
+		1B5759332BD1A30000423F15 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		1B5759362BD1BC6200423F15 /* MoodOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodOO.swift; sourceTree = "<group>"; };
 		1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		1BF240912BCC8B2200467AAA /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		1BF240992BCD5AAC00467AAA /* MeditationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDO.swift; sourceTree = "<group>"; };
@@ -87,6 +95,7 @@
 			children = (
 				1B04BEB12BC5B47100E1EE79 /* EvenBetterApp.swift */,
 				1B387EB52BC9BED00094A434 /* ContentView.swift */,
+				1B57592C2BD1A06F00423F15 /* EvenBetter */,
 				1B387EDA2BC9C6CF0094A434 /* Serenity */,
 				1B387EDC2BC9CDE20094A434 /* Task */,
 				1BF2409B2BCD6E4700467AAA /* Protocols */,
@@ -141,6 +150,41 @@
 				1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B57592C2BD1A06F00423F15 /* EvenBetter */ = {
+			isa = PBXGroup;
+			children = (
+				1B5759352BD1BBE900423F15 /* Models */,
+				1B5759302BD1A29100423F15 /* Components */,
+				1B57592F2BD1A23400423F15 /* Views */,
+			);
+			path = EvenBetter;
+			sourceTree = "<group>";
+		};
+		1B57592F2BD1A23400423F15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B57592D2BD1A0A200423F15 /* MoodView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B5759302BD1A29100423F15 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B5759312BD1A29E00423F15 /* MoodCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1B5759352BD1BBE900423F15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B5759332BD1A30000423F15 /* Mood.swift */,
+				1B5759362BD1BC6200423F15 /* MoodOO.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1BF240932BCC97E800467AAA /* Models */ = {
@@ -287,14 +331,18 @@
 				1B387ED02BC9C4C60094A434 /* MeditationList.swift in Sources */,
 				1B387ED12BC9C4C60094A434 /* MeditationView.swift in Sources */,
 				1B387EBA2BC9BED00094A434 /* TaskModel.swift in Sources */,
+				1B5759342BD1A30000423F15 /* Mood.swift in Sources */,
+				1B5759322BD1A29E00423F15 /* MoodCard.swift in Sources */,
 				1B387EB82BC9BED00094A434 /* AddTaskButton.swift in Sources */,
 				1B5759202BCF3AA100423F15 /* MeditationCard.swift in Sources */,
 				1B387ECD2BC9C4C60094A434 /* AudioManager.swift in Sources */,
 				1B387ED42BC9C4C60094A434 /* PlaybackControlButton.swift in Sources */,
 				1B387EB92BC9BED00094A434 /* TaskRow.swift in Sources */,
 				1B387EBD2BC9BED00094A434 /* TaskView.swift in Sources */,
+				1B5759372BD1BC6200423F15 /* MoodOO.swift in Sources */,
 				1B387ECE2BC9C4C60094A434 /* MeditationOO.swift in Sources */,
 				1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */,
+				1B57592E2BD1A0A200423F15 /* MoodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +492,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -477,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
