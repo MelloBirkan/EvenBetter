@@ -16,7 +16,7 @@ enum MoodType: String {
   case cansado = "Cansado"
 }
 
-struct Mood: Identifiable {
+struct Mood: Identifiable, Equatable {
   let id = UUID()
   let type: MoodType
   var name: String {

@@ -8,37 +8,47 @@
 import SwiftUI
 
 struct MoodView: View {
+  @State var moodSelected: Mood?
+  let moods = MoodOO().moods
+
     var body: some View {
-      @State var isSelected = false
-      let moods = MoodOO().moods
-      
-      GeometryReader(content: { geometry in
-        ZStack(alignment: .bottom) {
-        VStack(alignment: .center, spacing: nil, content: {
-            HeaderView()
-              .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
+      NavigationStack {
+        GeometryReader(content: { geometry in
+          ZStack(alignment: .bottom) {
+          VStack(alignment: .center, spacing: nil, content: {
+              HeaderView()
+                .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
+              
+              LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
+                ForEach(moods) { mood in
+                    MoodCard(moodImage: mood.image, humor: mood.name, descricao: mood.description, isSelected: mood == moodSelected)
+                    .onTapGesture {
+                      withAnimation {
+                        moodSelected = mood
+                      }
+                    }
+                }
+              })
+              .padding(.top, -50)
             
-            LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
-              ForEach(moods) { mood in
-                MoodCard(moodImage: mood.image, humor: mood.name, descricao: mood.description, isSelected: isSelected)
+            if (moodSelected != nil) {
+              NavigationLink(destination: ContentView()) {
+                Text("Continuar")
+                  .bold()
+                  .foregroundStyle(.text)
+                  .padding(.horizontal, 20)
+                  .padding(.vertical, 5)
               }
-            })
-            .padding(.top, -50)
-          
-          Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            Text("Continuar")
-              .bold()
-              .foregroundStyle(.text)
-              .padding(.horizontal, 20)
-              .padding(.vertical, 5)
+              .padding(.top, 40)
+              .buttonStyle(.borderedProminent)
+              .buttonBorderShape(.roundedRectangle(radius: 13))
+              .tint(.accent)
+            }
           })
-          .padding(.top, 40)
-          .buttonStyle(.borderedProminent)
-          .buttonBorderShape(.roundedRectangle(radius: 13))
+            }
+          
         })
-          }
-        
-      })
+      }
     }
 }
 
