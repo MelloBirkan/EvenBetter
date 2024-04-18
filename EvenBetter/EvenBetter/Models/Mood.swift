@@ -18,6 +18,9 @@ enum MoodType: String {
 
 struct Mood {
   let type: MoodType
-  let name: MoodType.RawValue
+  var name: String {
+    return self.type.rawValue
+  }
   let description: String
+  let image: Image
 }
