@@ -43,7 +43,9 @@ struct MeditationList: View {
         .refreshable {
           meditations.fetch()
         }
+        .background(Color.BG)
       }
+      .tint(.accent)
     }
   }
 }

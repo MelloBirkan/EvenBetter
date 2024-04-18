@@ -48,7 +48,9 @@ struct MoodView: View {
             }
           
         })
+        .background(Color.BG)
       }
+
     }
 }
 

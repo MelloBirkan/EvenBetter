@@ -17,7 +17,7 @@ struct MoodCard: View {
     ZStack(alignment: .leading) {
       RoundedRectangle(cornerRadius: 12)
         .frame(width: 112, height: 151)
-        .foregroundStyle(.white)
+        .foregroundStyle(.moodCard)
         .shadow(radius: 10)
       
       VStack(alignment: .leading) {
@@ -37,7 +37,6 @@ struct MoodCard: View {
         
         Text(descricao)
           .font(.caption2)
-          .foregroundStyle(.gray)
           .foregroundStyle(.secondary)
           .padding(.bottom)
           .multilineTextAlignment(.leading)
