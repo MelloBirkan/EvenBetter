@@ -10,6 +10,7 @@ import SwiftUI
 struct MoodView: View {
     var body: some View {
       @State var isSelected = false
+      let moods = MoodOO().moods
       
       GeometryReader(content: { geometry in
         ZStack(alignment: .bottom) {
@@ -18,14 +19,22 @@ struct MoodView: View {
               .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
             
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
-              MoodCard(moodImage: Image(.feliz), humor: "Feiz", descricao: "Sem vontade de se movimentar")
-              MoodCard(moodImage: Image(.triste), humor: "Triste", descricao: "Sem vontade de se movimentar")
-              MoodCard(moodImage: Image(.ansioso), humor: "Ansioso", descricao: "Sem vontade de se movimentar")
-              MoodCard(moodImage: Image(.motivado), humor: "Motivado", descricao: "Sem vontade de se movimentar")
-              MoodCard(moodImage: Image(.bravo), humor: "Bravo", descricao: "Sem vontade de se movimentar")
-              MoodCard(moodImage: Image(.cansado), humor: "Cansado", descricao: "Sem vontade de se movimentar")
+              ForEach(moods) { mood in
+                MoodCard(moodImage: mood.image, humor: mood.name, descricao: mood.description, isSelected: isSelected)
+              }
             })
             .padding(.top, -50)
+          
+          Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Text("Continuar")
+              .bold()
+              .foregroundStyle(.text)
+              .padding(.horizontal, 20)
+              .padding(.vertical, 5)
+          })
+          .padding(.top, 40)
+          .buttonStyle(.borderedProminent)
+          .buttonBorderShape(.roundedRectangle(radius: 13))
         })
           }
         
