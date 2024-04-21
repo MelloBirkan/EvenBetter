@@ -6,9 +6,11 @@ import SwiftData
 
 struct TaskView: View {
   @Environment(\.modelContext) private var modelContext
-  @Query private var tasks: [TaskModel]
   @State private var newTask: TaskModel?
+  @State private var taskStatus = TaskStatus.uncompleted
   @State var taskBeingEdited: TaskModel?
+  @Query<TaskModel>(filter:#Predicate { $0.isCompleted}) private var completedTasks: [TaskModel]
+  @Query<TaskModel>(filter:#Predicate { !($0.isCompleted)}) private var uncompletedTasks: [TaskModel]
   
   var body: some View {
     // MARK: Header
@@ -33,9 +35,16 @@ struct TaskView: View {
         }
         Text("Selecione uma das opções abaixo.")
         
+        Picker("", selection: $taskStatus) {
+          Text("Não completadas").tag(TaskStatus.uncompleted)
+          Text("Completadas").tag(TaskStatus.completed)
+        }
+        .pickerStyle(.segmented)
+        .padding(.horizontal)
+        
         // MARK: Tasks
         ScrollView(showsIndicators: false) {
-          ForEach(tasks) { task in
+          ForEach(taskStatus == .uncompleted ? uncompletedTasks : completedTasks) { task in
             TaskRow(task: task)
             
               .contextMenu(ContextMenu(menuItems: {
@@ -79,14 +88,6 @@ struct TaskView: View {
   private func addTask() {
     withAnimation {
       newTask = TaskModel()
-    }
-  }
-  
-  private func deleteItems(offsets: IndexSet) {
-    withAnimation {
-      for index in offsets {
-        modelContext.delete(tasks[index])
-      }
     }
   }
 }

@@ -8,6 +8,10 @@
 import SwiftUI
 import SwiftData
 
+enum TaskStatus {
+  case completed, uncompleted
+}
+
 @Model
 final class TaskModel {
   var title: String
@@ -15,7 +19,7 @@ final class TaskModel {
   var hour: Date
   var isCompleted: Bool = false
   var color: String
-    
+  
   static let colors = ["LeftRecColor", "RightRecColor", "MidRecColor", "MainRecColor"]
   
   init(title: String = "", summary: String = "", hour: Date = Date.now) {
@@ -27,9 +31,9 @@ final class TaskModel {
   
   static let sampleData = [
     TaskModel(title: "Tomar banho", summary: "Pegar toalha na varanda", hour: Date()),
-        TaskModel(title: "Estudar Swift", summary: "Revisar conceitos de Date e DateFormatter", hour: Date()),
-        TaskModel(title: "Fazer compras", summary: "Comprar leite, pão e ovos", hour: Date()),
-        TaskModel(title: "Ir à academia", summary: "", hour: Date()),
-        TaskModel(title: "Ler um livro", summary: "Capítulo 5 do livro de programação", hour: Date())
+    TaskModel(title: "Estudar Swift", summary: "Revisar conceitos de Date e DateFormatter", hour: Date()),
+    TaskModel(title: "Fazer compras", summary: "Comprar leite, pão e ovos", hour: Date()),
+    TaskModel(title: "Ir à academia", summary: "", hour: Date()),
+    TaskModel(title: "Ler um livro", summary: "Capítulo 5 do livro de programação", hour: Date())
   ]
 }
