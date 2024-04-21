@@ -9,13 +9,16 @@ import SwiftUI
 
 struct AddTaskButton: View {
   let action: () -> Void
+  @State var buttonTapped = false
     var body: some View {
       Button(action: {
       action()
+        self.buttonTapped.toggle()
       }, label: {
         Image(systemName: "plus.circle.fill")
           .foregroundStyle(.text)
           .font(.system(size: 45))
+          .symbolEffect(.bounce, value: buttonTapped)
       })
     }
 }

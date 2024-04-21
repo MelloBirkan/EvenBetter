@@ -29,6 +29,7 @@ struct MoodView: View {
                     }
                 }
               })
+              .padding(.horizontal)
               .padding(.top, -50)
             
             if (moodSelected != nil) {
