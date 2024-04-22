@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeaderView: View {
+struct WelcomeHeader: View {
   let greetings = "Olá, Marcello"
   let feeling = "Como você está se sentindo hoje?"
   var informationIsVisible = true
@@ -62,5 +62,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-  HeaderView()
+  WelcomeHeader()
 }

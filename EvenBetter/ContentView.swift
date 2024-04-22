@@ -9,14 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-  @Query private var tasks: [TaskModel]
+  @Query<TaskModel>(filter:#Predicate { !($0.isCompleted)}) private var tasks: [TaskModel]
   
   var body: some View {
     TabView {
       MoodView()
         .tabItem {
           Label("Início", systemImage: "house.fill")
-      
       }
       
       TaskView()
