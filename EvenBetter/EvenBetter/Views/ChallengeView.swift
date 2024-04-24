@@ -24,6 +24,7 @@ struct ChallengeView: View {
       }
       .navigationBarBackButtonHidden(true)
       .navigationTitle("Desafios")
+      .navigationBarTitleDisplayMode(.large)
     }
 }
 
