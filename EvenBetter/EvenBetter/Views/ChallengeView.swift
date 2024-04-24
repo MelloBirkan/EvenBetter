@@ -9,10 +9,26 @@ import SwiftUI
 
 struct ChallengeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      GeometryReader { geometry in
+          RoundedRectangle(cornerRadius: 25)
+            .ignoresSafeArea()
+            .foregroundStyle(.midRec)
+            .frame(width: geometry.size.width, height: geometry.size.height / 104) // Adaptado para usar a largura disponível
+        VStack(alignment: .leading) {
+          Text("Atividade de hoje:")
+            .foregroundStyle(.text)
+            .bold()
+            .font(.largeTitle)
+        }
+        .padding()
+      }
+      .navigationBarBackButtonHidden(true)
+      .navigationTitle("Desafios")
     }
 }
 
 #Preview {
+  NavigationStack {
     ChallengeView()
+  }
 }
