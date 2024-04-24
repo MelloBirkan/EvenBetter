@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B04BEB22BC5B47100E1EE79 /* EvenBetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04BEB12BC5B47100E1EE79 /* EvenBetterApp.swift */; };
-		1B04BEB42BC5B47100E1EE79 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04BEB32BC5B47100E1EE79 /* HeaderView.swift */; };
+		1B04BEB42BC5B47100E1EE79 /* WelcomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04BEB32BC5B47100E1EE79 /* WelcomeHeader.swift */; };
 		1B04BEB62BC5B47300E1EE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B04BEB52BC5B47300E1EE79 /* Assets.xcassets */; };
 		1B04BEB92BC5B47300E1EE79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B04BEB82BC5B47300E1EE79 /* Preview Assets.xcassets */; };
 		1B387EB82BC9BED00094A434 /* AddTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		1B04BEAE2BC5B47100E1EE79 /* EvenBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvenBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B04BEB12BC5B47100E1EE79 /* EvenBetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenBetterApp.swift; sourceTree = "<group>"; };
-		1B04BEB32BC5B47100E1EE79 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		1B04BEB32BC5B47100E1EE79 /* WelcomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeHeader.swift; sourceTree = "<group>"; };
 		1B04BEB52BC5B47300E1EE79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B04BEB82BC5B47300E1EE79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B387EAF2BC9BED00094A434 /* AddTaskButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskButton.swift; sourceTree = "<group>"; };
@@ -98,7 +98,6 @@
 		1B04BEB02BC5B47100E1EE79 /* EvenBetter */ = {
 			isa = PBXGroup;
 			children = (
-				1B57593C2BD1DE8C00423F15 /* Info.plist */,
 				1B04BEB12BC5B47100E1EE79 /* EvenBetterApp.swift */,
 				1B387EB52BC9BED00094A434 /* ContentView.swift */,
 				1B57592C2BD1A06F00423F15 /* EvenBetter */,
@@ -108,6 +107,7 @@
 				1B387EDD2BCA36A20094A434 /* Extensions */,
 				1B387EB12BC9BED00094A434 /* Componets */,
 				1B04BEB52BC5B47300E1EE79 /* Assets.xcassets */,
+				1B57593C2BD1DE8C00423F15 /* Info.plist */,
 				1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */,
 				1B04BEB72BC5B47300E1EE79 /* Preview Content */,
 			);
@@ -125,7 +125,7 @@
 		1B387EB12BC9BED00094A434 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
-				1B04BEB32BC5B47100E1EE79 /* HeaderView.swift */,
+				1B04BEB32BC5B47100E1EE79 /* WelcomeHeader.swift */,
 			);
 			path = Componets;
 			sourceTree = "<group>";
@@ -329,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B04BEB42BC5B47100E1EE79 /* HeaderView.swift in Sources */,
+				1B04BEB42BC5B47100E1EE79 /* WelcomeHeader.swift in Sources */,
 				1B04BEB22BC5B47100E1EE79 /* EvenBetterApp.swift in Sources */,
 				1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */,
 				1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */,
@@ -503,7 +503,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.5;
+				MARKETING_VERSION = 0.4.7;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -537,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.5;
+				MARKETING_VERSION = 0.4.7;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

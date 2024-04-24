@@ -16,7 +16,7 @@ struct MoodView: View {
         GeometryReader(content: { geometry in
           ZStack(alignment: .bottom) {
           VStack(alignment: .center, spacing: nil, content: {
-              HeaderView()
+              WelcomeHeader()
                 .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
               
               LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
