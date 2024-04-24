@@ -55,9 +55,7 @@ struct TaskView: View {
                 })
                 
                 Button(action: {
-                  withAnimation {
                     modelContext.delete(task)
-                  }
                 }, label: {
                   Label("Deletar", systemImage: "minus.circle.fill")
                 })
@@ -67,6 +65,7 @@ struct TaskView: View {
                   TaskDetailView(task: task)
                 }
               })
+              .animation(.bouncy(duration: 0.8), value: [uncompletedTasks, completedTasks])
           }
           .padding(.vertical)
           .frame(maxWidth: .infinity)
