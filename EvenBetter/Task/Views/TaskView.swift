@@ -9,8 +9,8 @@ struct TaskView: View {
   @State private var newTask: TaskModel?
   @State private var taskStatus = TaskStatus.uncompleted
   @State var taskBeingEdited: TaskModel?
-  @Query<TaskModel>(filter:#Predicate { $0.isCompleted}) private var completedTasks: [TaskModel]
-  @Query<TaskModel>(filter:#Predicate { !($0.isCompleted)}) private var uncompletedTasks: [TaskModel]
+  @Query<TaskModel>(filter:#Predicate { $0.isCompleted}, animation: .easeIn(duration: 1.1)) private var completedTasks: [TaskModel]
+  @Query<TaskModel>(filter:#Predicate { !($0.isCompleted)}, animation: .easeIn(duration: 1.1)) private var uncompletedTasks: [TaskModel]
   
   var body: some View {
     // MARK: Header
