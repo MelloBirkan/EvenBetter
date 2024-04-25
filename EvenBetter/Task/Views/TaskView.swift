@@ -30,6 +30,7 @@ struct TaskView: View {
             Spacer()
             
             AddTaskButton(action: addTask)
+              .offset(x: 25)
           }
           .padding()
         }

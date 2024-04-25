@@ -22,7 +22,7 @@ struct AddTaskButton: View {
               .padding(24)
               .rotationEffect(Angle.degrees(buttonTapped ? 0 : 90))
           }
-          .offset(x: buttonTapped ? -30 : 0, y: buttonTapped ? -55 : 0)
+          .offset(x: buttonTapped ? 0 : 0, y: buttonTapped ? -50 : 0)
           .opacity(buttonTapped ? 1 : 0)
           
           Button(action: {
@@ -34,7 +34,7 @@ struct AddTaskButton: View {
               .padding(24)
               .rotationEffect(Angle.degrees(buttonTapped ? 0 : 90))
           }
-          .offset(x: buttonTapped ? -60 : 0, y: 0)
+          .offset(x: buttonTapped ? -50 : 0, y: 0)
           .opacity(buttonTapped ? 1 : 0)
           
           Button(action: {
