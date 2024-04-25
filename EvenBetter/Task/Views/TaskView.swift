@@ -16,7 +16,7 @@ struct TaskView: View {
     // MARK: Header
     GeometryReader { geometry in
       VStack {
-        ZStack(alignment: .bottom) {
+        ZStack(alignment: .top) {
           RoundedRectangle(cornerRadius: 25)
             .ignoresSafeArea()
             .frame(width: geometry.size.width, height: 104) // Adaptado para usar a largura disponível
