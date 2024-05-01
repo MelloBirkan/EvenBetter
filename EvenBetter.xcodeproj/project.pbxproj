@@ -34,6 +34,7 @@
 		1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */; };
 		1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240912BCC8B2200467AAA /* SampleData.swift */; };
 		1BF2409A2BCD5AAC00467AAA /* MeditationDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240992BCD5AAC00467AAA /* MeditationDO.swift */; };
+		1BF58A662BE2659F0017807E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF58A652BE2659F0017807E /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		1BF240912BCC8B2200467AAA /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		1BF240992BCD5AAC00467AAA /* MeditationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDO.swift; sourceTree = "<group>"; };
+		1BF58A652BE2659F0017807E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5759312BD1A29E00423F15 /* MoodCard.swift */,
+				1BF58A652BE2659F0017807E /* CardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				1B5759322BD1A29E00423F15 /* MoodCard.swift in Sources */,
 				1B387EB82BC9BED00094A434 /* AddTaskButton.swift in Sources */,
 				1B57593B2BD1DABB00423F15 /* Challenge.swift in Sources */,
+				1BF58A662BE2659F0017807E /* CardView.swift in Sources */,
 				1B5759202BCF3AA100423F15 /* MeditationCard.swift in Sources */,
 				1B5759392BD1D8F400423F15 /* ChallengeView.swift in Sources */,
 				1B387ECD2BC9C4C60094A434 /* AudioManager.swift in Sources */,

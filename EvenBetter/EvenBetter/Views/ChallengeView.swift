@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChallengeView: View {
+  @State var challenge: Challenge
     var body: some View {
       GeometryReader { geometry in
           RoundedRectangle(cornerRadius: 25)
@@ -19,17 +20,20 @@ struct ChallengeView: View {
             .foregroundStyle(.text)
             .bold()
             .font(.largeTitle)
+          
+          CardView(challenge: challenge)
         }
         .padding()
       }
       .navigationBarBackButtonHidden(true)
       .navigationTitle("Desafios")
       .navigationBarTitleDisplayMode(.large)
+      .tint(.midRec)
     }
 }
 
 #Preview {
   NavigationStack {
-    ChallengeView()
+    ChallengeView(challenge: Challenge.sampleData)
   }
 }

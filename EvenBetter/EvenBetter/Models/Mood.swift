@@ -14,6 +14,7 @@ enum MoodType: String {
   case motivado = "Motivado"
   case bravo = "Bravo"
   case cansado = "Cansado"
+  case all
 }
 
 struct Mood: Identifiable, Equatable {

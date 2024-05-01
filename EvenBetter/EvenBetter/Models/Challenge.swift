@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct Challenge {
-  let mood: Mood
+  let mood: MoodType
   let name: String
   let sumarry: String
+  let image: Image
+  
+  static let sampleData = Challenge(mood: .ansioso, name: "Meditar", sumarry: "A meditação", image: Image(.meditation2))
 }
