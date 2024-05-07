@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChallengeView: View {
-  @State var challenge: Challenge
+  @Binding var atualChallenge: ChallengeOO
     var body: some View {
       GeometryReader { geometry in
           RoundedRectangle(cornerRadius: 25)
@@ -20,8 +20,12 @@ struct ChallengeView: View {
             .foregroundStyle(.text)
             .bold()
             .font(.largeTitle)
-          
-          CardView(challenge: challenge)
+          if !atualChallenge.challenge.isEmpty {
+            CardView(challenge: atualChallenge.challenge[0]) {
+              //            TODO: Resolver problema
+              atualChallenge.challenge.remove(at: 0)
+            }
+          }
         }
         .padding()
       }
@@ -34,6 +38,6 @@ struct ChallengeView: View {
 
 #Preview {
   NavigationStack {
-    ChallengeView(challenge: Challenge.sampleData)
+    ChallengeView(atualChallenge: .constant(ChallengeOO()))
   }
 }

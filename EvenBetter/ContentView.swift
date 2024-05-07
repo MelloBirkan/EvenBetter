@@ -13,7 +13,7 @@ struct ContentView: View {
   
   var body: some View {
     TabView {
-      MoodView()
+      ContentChallengeView()
         .tabItem {
           Label("Início", systemImage: "house.fill")
       }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MoodView: View {
-  @State var moodSelected: Mood?
+  @Binding var moodSelected: Mood?
+  @Binding var atualChallenge: ChallengeOO
   let moods = MoodOO().moods
 
     var body: some View {
@@ -33,13 +34,16 @@ struct MoodView: View {
               .padding(.top, -50)
             
             if (moodSelected != nil) {
-              NavigationLink(destination: ChallengeView(challenge: Challenge.sampleData)) {
+              Button(action: {
+//                TODO: Fazer salvar mood aqui colocar um desafio dentro do array
+                atualChallenge.challenge.append(Challenge.sampleData)
+              }, label: {
                 Text("Continuar")
                   .bold()
                   .foregroundStyle(.text)
                   .padding(.horizontal, 20)
                   .padding(.vertical, 5)
-              }
+              })
               .padding(.top, 40)
               .buttonStyle(.borderedProminent)
               .buttonBorderShape(.roundedRectangle(radius: 13))
@@ -56,5 +60,5 @@ struct MoodView: View {
 }
 
 #Preview {
-    MoodView()
+  MoodView(moodSelected: .constant(nil), atualChallenge: .constant(ChallengeOO()))
 }

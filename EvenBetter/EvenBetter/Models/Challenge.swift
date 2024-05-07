@@ -14,4 +14,23 @@ struct Challenge {
   let image: Image
   
   static let sampleData = Challenge(mood: .ansioso, name: "Meditar", sumarry: "A meditação", image: Image(.meditation2))
+  
+//  func getChallenge(mood: Mood) {
+//    switch mood.type {
+//    case .feliz:
+//      <#code#>
+//    case .triste:
+//      <#code#>
+//    case .ansioso:
+//      <#code#>
+//    case .motivado:
+//      <#code#>
+//    case .bravo:
+//      <#code#>
+//    case .cansado:
+//      <#code#>
+//    case .all:
+//      <#code#>
+//    }
+//  }
 }
