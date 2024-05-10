@@ -16,6 +16,9 @@ struct ContentChallengeView: View {
         MoodView(moodSelected: $moodSelected, atualChallenge: $atualChallenges)
       } else {
         ChallengeView(atualChallenge: $atualChallenges)
+          .task {
+            moodSelected = nil
+          }
       }
     }
 }
