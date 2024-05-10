@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MoodView: View {
   @Binding var moodSelected: Mood?
-  let moods = MoodOO().moods
   @Environment(\.modelContext) private var modelContext
   
   var body: some View {
@@ -21,7 +20,7 @@ struct MoodView: View {
               .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
             
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
-              ForEach(moods) { mood in
+              ForEach(Mood.moodsDataToDisplay) { mood in
                 MoodCard(moodImage: mood.image, humor: mood.name, descricao: mood.description, isSelected: mood == moodSelected)
                   .onTapGesture {
                     withAnimation {

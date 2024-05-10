@@ -36,6 +36,7 @@ struct ChallengeView: View {
       .navigationBarTitleDisplayMode(.large)
       .tint(.midRec)
     }
+    .background(Color.BG)
   }
 }
 
