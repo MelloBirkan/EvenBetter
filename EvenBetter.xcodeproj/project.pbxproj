@@ -24,7 +24,6 @@
 		1B387ED42BC9C4C60094A434 /* PlaybackControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */; };
 		1B387ED52BC9C4C60094A434 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EC82BC9C4C60094A434 /* PlayerView.swift */; };
 		1B387EDF2BCA36BA0094A434 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */; };
-		1B5146AB2BE7F71F00D47D9F /* ChallengeOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5146AA2BE7F71F00D47D9F /* ChallengeOO.swift */; };
 		1B5146AD2BE7F7A200D47D9F /* ContentChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5146AC2BE7F7A200D47D9F /* ContentChallengeView.swift */; };
 		1B5759202BCF3AA100423F15 /* MeditationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57591F2BCF3AA100423F15 /* MeditationCard.swift */; };
 		1B57592E2BD1A0A200423F15 /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57592D2BD1A0A200423F15 /* MoodView.swift */; };
@@ -58,7 +57,6 @@
 		1B387EC72BC9C4C60094A434 /* PlaybackControlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackControlButton.swift; sourceTree = "<group>"; };
 		1B387EC82BC9C4C60094A434 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1B387EDE2BCA36BA0094A434 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		1B5146AA2BE7F71F00D47D9F /* ChallengeOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeOO.swift; sourceTree = "<group>"; };
 		1B5146AC2BE7F7A200D47D9F /* ContentChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChallengeView.swift; sourceTree = "<group>"; };
 		1B57591F2BCF3AA100423F15 /* MeditationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCard.swift; sourceTree = "<group>"; };
 		1B57592D2BD1A0A200423F15 /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 				1B5759332BD1A30000423F15 /* Mood.swift */,
 				1B5759362BD1BC6200423F15 /* MoodOO.swift */,
 				1B57593A2BD1DABB00423F15 /* Challenge.swift */,
-				1B5146AA2BE7F71F00D47D9F /* ChallengeOO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,7 +356,6 @@
 				1B387ED42BC9C4C60094A434 /* PlaybackControlButton.swift in Sources */,
 				1B387EB92BC9BED00094A434 /* TaskRow.swift in Sources */,
 				1B387EBD2BC9BED00094A434 /* TaskView.swift in Sources */,
-				1B5146AB2BE7F71F00D47D9F /* ChallengeOO.swift in Sources */,
 				1B5759372BD1BC6200423F15 /* MoodOO.swift in Sources */,
 				1B387ECE2BC9C4C60094A434 /* MeditationOO.swift in Sources */,
 				1B5146AD2BE7F7A200D47D9F /* ContentChallengeView.swift in Sources */,
