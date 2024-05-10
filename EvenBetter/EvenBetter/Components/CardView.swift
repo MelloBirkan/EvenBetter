@@ -36,7 +36,7 @@ struct CardView: View {
     )
     .overlay(
       VStack {
-        Text(challenge.sumarry)
+        Text(challenge.summary)
           .font(.subheadline)
         
         Spacer()
@@ -76,9 +76,10 @@ struct CardView: View {
                 .stroke(.linearGradient(colors: [.white.opacity(0.3), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
             )
             .cornerRadius(20)
-          }.onLongPressGesture {
-            action()
           }
+//          .onLongPressGesture {
+//            action()
+//          }
         }
         
       }

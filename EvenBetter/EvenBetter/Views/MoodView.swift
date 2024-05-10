@@ -11,32 +11,32 @@ struct MoodView: View {
   @Binding var moodSelected: Mood?
   @Binding var atualChallenge: ChallengeOO
   let moods = MoodOO().moods
-
-    var body: some View {
-      NavigationStack {
-        GeometryReader(content: { geometry in
-          ZStack(alignment: .bottom) {
+  
+  var body: some View {
+    NavigationStack {
+      GeometryReader(content: { geometry in
+        ZStack(alignment: .bottom) {
           VStack(alignment: .center, spacing: nil, content: {
-              WelcomeHeader()
-                .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
-              
-              LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
-                ForEach(moods) { mood in
-                    MoodCard(moodImage: mood.image, humor: mood.name, descricao: mood.description, isSelected: mood == moodSelected)
-                    .onTapGesture {
-                      withAnimation {
-                        moodSelected = mood
-                      }
+            WelcomeHeader()
+              .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
+            
+            LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
+              ForEach(moods) { mood in
+                MoodCard(moodImage: mood.image, humor: mood.name, descricao: mood.description, isSelected: mood == moodSelected)
+                  .onTapGesture {
+                    withAnimation {
+                      moodSelected = mood
                     }
-                }
-              })
-              .padding(.horizontal)
-              .padding(.top, -50)
+                  }
+              }
+            })
+            .padding(.horizontal)
+            .padding(.top, -50)
             
             if (moodSelected != nil) {
               Button(action: {
-//                TODO: Fazer salvar mood aqui colocar um desafio dentro do array
-                atualChallenge.challenge.append(Challenge.sampleData)
+                //                TODO: Fazer salvar mood aqui colocar um desafio dentro do array
+                atualChallenge.getChallenge(mood: moodSelected!.type)
               }, label: {
                 Text("Continuar")
                   .bold()
@@ -50,13 +50,13 @@ struct MoodView: View {
               .tint(.accent)
             }
           })
-            }
-          
-        })
-        .background(Color.BG)
-      }
-
+        }
+        
+      })
+      .background(Color.BG)
     }
+    
+  }
 }
 
 #Preview {
