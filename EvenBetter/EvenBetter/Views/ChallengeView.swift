@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ChallengeView: View {
-  @Binding var atualChallenge: ChallengeOO
+  @Environment(\.modelContext) private var modelContext
+  let atualChallenge: Challenge
   
   var body: some View {
     NavigationStack {
@@ -22,11 +23,11 @@ struct ChallengeView: View {
             .foregroundStyle(.text)
             .bold()
             .font(.largeTitle)
-          if !atualChallenge.challenge.isEmpty {
-            CardView(challenge: atualChallenge.challenge[0]) {
-              atualChallenge.challenge.remove(at: 0)
+//          if !atualChallenge.challenge.isEmpty {
+            CardView(challenge: atualChallenge) {
+              modelContext.delete(atualChallenge)
             }
-          }
+//          }
         }
         .padding()
       }
@@ -40,6 +41,6 @@ struct ChallengeView: View {
 
 #Preview {
   NavigationStack {
-    ChallengeView(atualChallenge: .constant(ChallengeOO.sampleData))
+    ChallengeView(atualChallenge: Challenge.sampleData)
   }
 }

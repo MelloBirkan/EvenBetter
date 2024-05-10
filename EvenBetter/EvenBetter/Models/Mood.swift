@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum MoodType: String {
+enum MoodType: String, Codable {
   case feliz = "Feliz"
   case triste = "Triste"
   case ansioso = "Ansioso"

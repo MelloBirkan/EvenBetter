@@ -27,7 +27,7 @@ struct CardView: View {
       Spacer()
     }
     .frame(maxWidth: .infinity)
-    .background(challenge.image.resizable().aspectRatio(contentMode: .fill))
+    .background(Image(challenge.image).resizable().aspectRatio(contentMode: .fill))
     .frame(height: 300)
     .cornerRadius(20)
     .overlay(
