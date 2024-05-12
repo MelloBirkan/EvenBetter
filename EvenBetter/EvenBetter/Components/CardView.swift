@@ -27,7 +27,15 @@ struct CardView: View {
       Spacer()
     }
     .frame(maxWidth: .infinity)
-    .background(Image(challenge.image).resizable().aspectRatio(contentMode: .fill))
+    .background(
+      AsyncImage(url: URL(string: challenge.image)) { image in
+        image
+          .resizable()
+          .aspectRatio(contentMode: .fill)
+      } placeholder: {
+        ProgressView()
+      }
+    )
     .frame(height: 300)
     .cornerRadius(20)
     .overlay(
@@ -77,9 +85,9 @@ struct CardView: View {
             )
             .cornerRadius(20)
           }
-//          .onLongPressGesture {
-//            action()
-//          }
+          //          .onLongPressGesture {
+          //            action()
+          //          }
         }
         
       }
@@ -92,7 +100,7 @@ struct CardView: View {
           RoundedRectangle(cornerRadius: 20)
             .stroke(.linearGradient(colors: [.white.opacity(0.3), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
         )
-        .offset(y: 80)
+        .offset(y: 110)
         .padding(20)
     )
   }
