@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentChallengeView: View {
-  @State private var atualChallenges: ChallengeOO = ChallengeOO()
+  @Query private var atualChallenges: [Challenge]
   @State private var moodSelected: Mood?
   
     var body: some View {
-      if atualChallenges.challenge.isEmpty {
-        MoodView(moodSelected: $moodSelected, atualChallenge: $atualChallenges)
+      if atualChallenges.isEmpty {
+        MoodView(moodSelected: $moodSelected)
       } else {
-        ChallengeView(atualChallenge: $atualChallenges)
+        ChallengeView(atualChallenge: atualChallenges[0])
+          .task {
+            moodSelected = nil
+          }
       }
     }
 }

@@ -9,8 +9,7 @@ import SwiftUI
 
 struct MoodView: View {
   @Binding var moodSelected: Mood?
-  @Binding var atualChallenge: ChallengeOO
-  let moods = MoodOO().moods
+  @Environment(\.modelContext) private var modelContext
   
   var body: some View {
     NavigationStack {
@@ -21,7 +20,7 @@ struct MoodView: View {
               .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
             
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
-              ForEach(moods) { mood in
+              ForEach(Mood.moodsDataToDisplay) { mood in
                 MoodCard(moodImage: mood.image, humor: mood.name, descricao: mood.description, isSelected: mood == moodSelected)
                   .onTapGesture {
                     withAnimation {
@@ -36,7 +35,7 @@ struct MoodView: View {
             if (moodSelected != nil) {
               Button(action: {
                 //                TODO: Fazer salvar mood aqui colocar um desafio dentro do array
-                atualChallenge.getChallenge(mood: moodSelected!.type)
+                modelContext.insert(getChallenge(mood: moodSelected!.type))
               }, label: {
                 Text("Continuar")
                   .bold()
@@ -57,8 +56,12 @@ struct MoodView: View {
     }
     
   }
+  func getChallenge(mood: MoodType) -> Challenge {
+    let filteredChallenges = Challenge.challengesData.filter { $0.mood == mood }
+    return filteredChallenges.randomElement()!
+      }
 }
 
 #Preview {
-  MoodView(moodSelected: .constant(nil), atualChallenge: .constant(ChallengeOO()))
+  MoodView(moodSelected: .constant(nil))
 }

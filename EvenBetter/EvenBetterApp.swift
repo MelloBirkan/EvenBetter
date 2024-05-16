@@ -15,7 +15,7 @@ struct EvenBetterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            .modelContainer(for: TaskModel.self, isUndoEnabled: true)
+            .modelContainer(for: [TaskModel.self, Challenge.self], isUndoEnabled: true)
             .environmentObject(audioManager)
         }
     }
