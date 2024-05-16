@@ -1,3 +1,6 @@
+[![Swift Version][swift-image]][swift-url]
+[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
+
 # EvenBetter
 
 EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornada de bem-estar pessoal e produtividade, através de um conjunto de ferramentas intuitivas e acessíveis.
