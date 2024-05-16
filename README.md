@@ -1,6 +1,15 @@
 # EvenBetter
 
+[![Swift Version](https://img.shields.io/badge/Swift-5.10-pink.svg)](https://swift.org)
+[![SwiftUI](https://img.shields.io/badge/SwiftUI-5.0-brightgreen.svg)](https://developer.apple.com/xcode/swiftui/)
+[![SwiftData](https://img.shields.io/badge/SwiftData-1.0-orange.svg)](https://developer.apple.com/documentation/swiftdata)
+[![iOS](https://img.shields.io/badge/iOS-17%2B-blue.svg)](https://developer.apple.com/ios/)
+![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
+
+
+
 EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornada de bem-estar pessoal e produtividade, através de um conjunto de ferramentas intuitivas e acessíveis.
+
 
 ## Índice
 
@@ -14,8 +23,10 @@ EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornad
 
 Aqui estão alguns screenshots e GIFs do aplicativo em ação:
 
-![Screenshot1](assets/screenshot1.png)
-![Screenshot2](assets/screenshot2.png)
+<div style="display: flex;">
+  <img src="assets/tarefas-video1.gif" alt="Screenshot1" width="300">
+  <img src="assets/meditacao-video1.gif" alt="Screenshot2" width="300">
+</div>
 
 ![App Demo](assets/demo.gif)
 
@@ -44,11 +55,14 @@ Para utilizar o aplicativo, siga os passos abaixo:
 - [x] Desafios Diários: Complete desafios diários para um estilo de vida saudável.
 - [x] Player para Meditação: Ouça faixas relaxantes de meditação.
 - [x] Registro de Humor e Bem-estar: Registre seu humor e bem-estar diário.
-- [x] Timer Pomodoro: Utilize o timer Pomodoro para gerenciar seu tempo.
 
 ## Tecnologias Utilizadas
 
 - [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 - [Swift](https://swift.org/)
 - [Combine](https://developer.apple.com/documentation/combine)
+- [SwiftData](https://developer.apple.com/documentation/swiftdata)
 - [CloudKit](https://developer.apple.com/documentation/cloudkit)
+
+[swift-image]:https://img.shields.io/badge/swift-5.10-orange.svg
+[swift-url]: https://swift.org/
