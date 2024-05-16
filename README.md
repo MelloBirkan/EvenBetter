@@ -14,7 +14,7 @@ EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornad
 
 Aqui estão alguns screenshots e GIFs do aplicativo em ação:
 
-![Screenshot1](assets/screenshot1.png)
+![Screenshot1](assets/tarefas1.png)
 ![Screenshot2](assets/screenshot2.png)
 
 ![App Demo](assets/demo.gif)
@@ -51,4 +51,5 @@ Para utilizar o aplicativo, siga os passos abaixo:
 - [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 - [Swift](https://swift.org/)
 - [Combine](https://developer.apple.com/documentation/combine)
+- [SwiftData](https://developer.apple.com/documentation/swiftdata)
 - [CloudKit](https://developer.apple.com/documentation/cloudkit)
