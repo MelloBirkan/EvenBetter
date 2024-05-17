@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
   var challenge: Challenge
   let action: () -> Void
+  
   var body: some View {
     VStack {
       VStack {
@@ -108,7 +109,8 @@ struct CardView: View {
 
 
 #Preview {
-  CardView(challenge: Challenge.sampleData) {
+  CardView(challenge: SampleDataChallenge.shared.challenge) {
     
   }
+  .modelContainer(SampleDataChallenge.shared.modelContainer)
 }

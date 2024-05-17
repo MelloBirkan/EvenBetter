@@ -42,6 +42,6 @@ struct ChallengeView: View {
 
 #Preview {
   NavigationStack {
-    ChallengeView(atualChallenge: Challenge.sampleData)
+    ChallengeView(atualChallenge: SampleDataChallenge.shared.challenge)
   }
 }

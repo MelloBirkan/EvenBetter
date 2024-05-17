@@ -22,7 +22,7 @@ final class Challenge {
     self.image = image
   }
   
-  static let sampleData = Challenge(mood: .ansioso, name: "Meditar", summary: "A meditação", image: "meditation2")
+  static let sampleData = Challenge(mood: .feliz, name: "Dança", summary: "Dance sua música favorita por alguns minutos", image: "https://cdn.midjourney.com/5325e4ec-dde1-4564-a025-687a7a090d40/0_0.png")
   
   static let challengesData = [
           Challenge(mood: .feliz, name: "Gratidão", summary: "Escreva 3 coisas pelas quais você é grato hoje", image: "https://cdn.midjourney.com/819f55a7-ff0b-4d8c-b17a-8221892f001b/0_0.png"),
