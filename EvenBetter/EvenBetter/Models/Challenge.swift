@@ -34,8 +34,8 @@ final class Challenge {
           Challenge(mood: .motivado, name: "Meta", summary: "Defina uma meta pessoal e planeje passos para alcançá-la", image: "https://cdn.midjourney.com/3a21a20b-de0b-414f-902d-e116908b6551/0_0.png"),
           Challenge(mood: .motivado, name: "Aprendizado", summary: "Aprenda algo novo sobre um tópico que te interessa", image: "https://cdn.midjourney.com/9100881c-fc95-48e2-b133-b9c8d1b46cd8/0_0.png"),
           Challenge(mood: .bravo, name: "Pausa", summary: "Faça uma pausa, respire fundo e pense antes de reagir", image: "https://cdn.midjourney.com/074ea1d9-e7e5-4e00-baa8-5ea19f4c5cf3/0_0.png"),
-          Challenge(mood: .bravo, name: "Exercício", summary: "Faça exercícios físicos para liberar a tensão", image: "exercise"),
-          Challenge(mood: .cansado, name: "Descanso", summary: "Tire uma soneca de 20 minutos ou relaxe ouvindo música calma", image: "sleeping"),
+          Challenge(mood: .bravo, name: "Exercício", summary: "Faça exercícios físicos para liberar a tensão", image: "https://cdn.midjourney.com/26bb8924-9e7f-4835-94b7-031a3ff258c7/0_0.png"),
+          Challenge(mood: .cansado, name: "Descanso", summary: "Tire uma soneca de 20 minutos ou relaxe ouvindo música calma", image: "https://cdn.midjourney.com/02cea619-a96e-42e5-9b45-916d271ad258/0_0.png"),
           Challenge(mood: .cansado, name: "Alongamento", summary: "Faça alguns alongamentos suaves para energizar o corpo", image: "https://cdn.midjourney.com/262d664b-7fab-4658-8021-2975eb95a090/0_0.png"),
           Challenge(mood: .ansioso, name: "Yoga", summary: "Faça uma sessão de yoga de 15 minutos para acalmar a mente e o corpo", image: "https://cdn.midjourney.com/a59e6c2b-4765-41db-81df-0e9d94d16fc8/0_0.png"),
           Challenge(mood: .motivado, name: "Corrida", summary: "Faça uma corrida de 20 minutos para energizar o corpo e a mente", image: "https://cdn.midjourney.com/92ca24ec-9598-4b09-ac8e-583cc2fc9531/0_0.png")

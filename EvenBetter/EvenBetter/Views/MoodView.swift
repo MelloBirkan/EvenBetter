@@ -33,20 +33,9 @@ struct MoodView: View {
             .padding(.top, -50)
             
             if (moodSelected != nil) {
-              Button(action: {
-                //                TODO: Fazer salvar mood aqui colocar um desafio dentro do array
+              ContinueButton {
                 modelContext.insert(getChallenge(mood: moodSelected!.type))
-              }, label: {
-                Text("Continuar")
-                  .bold()
-                  .foregroundStyle(.text)
-                  .padding(.horizontal, 20)
-                  .padding(.vertical, 5)
-              })
-              .padding(.top, 40)
-              .buttonStyle(.borderedProminent)
-              .buttonBorderShape(.roundedRectangle(radius: 13))
-              .tint(.accent)
+              }
             }
           })
         }

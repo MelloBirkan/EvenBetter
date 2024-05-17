@@ -22,12 +22,18 @@ struct ChallengeView: View {
           Text("Atividade de hoje:")
             .foregroundStyle(.text)
             .bold()
-            .font(.largeTitle)
-//          if !atualChallenge.challenge.isEmpty {
-            CardView(challenge: atualChallenge) {
+            .font(.title3)
+          
+          CardView(challenge: atualChallenge)
+          
+          HStack {
+            Spacer() // Adiciona espaço antes do botão para centralizá-lo horizontalmente
+            ContinueButton(action: {
               modelContext.delete(atualChallenge)
-            }
-//          }
+            }, text: "Concluído")
+            Spacer() // Adiciona espaço depois do botão para centralizá-lo horizontalmente
+          }
+          
         }
         .padding()
       }
@@ -35,8 +41,9 @@ struct ChallengeView: View {
       .navigationTitle("Desafios")
       .navigationBarTitleDisplayMode(.large)
       .tint(.midRec)
+      .background(Color.BG)
     }
-    .background(Color.BG)
+
   }
 }
 

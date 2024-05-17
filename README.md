@@ -24,8 +24,9 @@ EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornad
 Aqui estão alguns screenshots e GIFs do aplicativo em ação:
 
 <div style="display: flex;">
-  <img src="assets/tarefas-video1.gif" alt="Screenshot1" width="300">
-  <img src="assets/meditacao-video1.gif" alt="Screenshot2" width="300">
+  <img src="assets/challenges-video1.gif" alt="video-desafios-demo" width="300">
+  <img src="assets/tarefas-video1.gif" alt="video-tarefas-demo" width="300">
+  <img src="assets/meditacao-video1.gif" alt="video-meditacao-demo" width="300">
 </div>
 
 ![App Demo](assets/demo.gif)
