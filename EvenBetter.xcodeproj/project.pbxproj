@@ -33,6 +33,9 @@
 		1B57593B2BD1DABB00423F15 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57593A2BD1DABB00423F15 /* Challenge.swift */; };
 		1B9DA1FE2BF6D1CF006ED091 /* SampleDataChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DA1FD2BF6D1CF006ED091 /* SampleDataChallenge.swift */; };
 		1B9DA2002BF6DB14006ED091 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DA1FF2BF6DB14006ED091 /* ContinueButton.swift */; };
+		1B9DA2022BF6EFCC006ED091 /* hometown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B9DA2012BF6EFCC006ED091 /* hometown.mp3 */; };
+		1B9DA2042BF6EFD4006ED091 /* sky-high.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B9DA2032BF6EFD4006ED091 /* sky-high.mp3 */; };
+		1B9DA2082BF6F125006ED091 /* fireflies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B9DA2072BF6F125006ED091 /* fireflies.mp3 */; };
 		1BF2406E2BCC09BA00467AAA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */; };
 		1BF240922BCC8B2200467AAA /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240912BCC8B2200467AAA /* SampleData.swift */; };
 		1BF2409A2BCD5AAC00467AAA /* MeditationDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF240992BCD5AAC00467AAA /* MeditationDO.swift */; };
@@ -68,6 +71,9 @@
 		1B57593C2BD1DE8C00423F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1B9DA1FD2BF6D1CF006ED091 /* SampleDataChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataChallenge.swift; sourceTree = "<group>"; };
 		1B9DA1FF2BF6DB14006ED091 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
+		1B9DA2012BF6EFCC006ED091 /* hometown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hometown.mp3; sourceTree = "<group>"; };
+		1B9DA2032BF6EFD4006ED091 /* sky-high.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sky-high.mp3"; sourceTree = "<group>"; };
+		1B9DA2072BF6F125006ED091 /* fireflies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fireflies.mp3; sourceTree = "<group>"; };
 		1BF2406D2BCC09BA00467AAA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		1BF240912BCC8B2200467AAA /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		1BF240992BCD5AAC00467AAA /* MeditationDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDO.swift; sourceTree = "<group>"; };
@@ -114,6 +120,9 @@
 				1B04BEB52BC5B47300E1EE79 /* Assets.xcassets */,
 				1B57593C2BD1DE8C00423F15 /* Info.plist */,
 				1B387EBE2BC9C4C60094A434 /* ages-ago.mp3 */,
+				1B9DA2012BF6EFCC006ED091 /* hometown.mp3 */,
+				1B9DA2032BF6EFD4006ED091 /* sky-high.mp3 */,
+				1B9DA2072BF6F125006ED091 /* fireflies.mp3 */,
 				1B04BEB72BC5B47300E1EE79 /* Preview Content */,
 			);
 			path = EvenBetter;
@@ -317,9 +326,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9DA2022BF6EFCC006ED091 /* hometown.mp3 in Resources */,
 				1B04BEB92BC5B47300E1EE79 /* Preview Assets.xcassets in Resources */,
 				1B04BEB62BC5B47300E1EE79 /* Assets.xcassets in Resources */,
+				1B9DA2082BF6F125006ED091 /* fireflies.mp3 in Resources */,
 				1B387ECC2BC9C4C60094A434 /* ages-ago.mp3 in Resources */,
+				1B9DA2042BF6EFD4006ED091 /* sky-high.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6;
+				MARKETING_VERSION = 0.6.1;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -541,7 +553,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6;
+				MARKETING_VERSION = 0.6.1;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.mellobirkan.EvenBetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
