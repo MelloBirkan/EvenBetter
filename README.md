@@ -24,10 +24,10 @@ EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornad
 Aqui estão alguns screenshots e GIFs do aplicativo em ação:
 
 <div style="display: flex;">
-  <img src="assets/video-demo.gif" alt="video-demo" width="300">
   <img src="assets/challenges-video1.gif" alt="video-desafios-demo" width="300">
   <img src="assets/tarefas-video1.gif" alt="video-tarefas-demo" width="300">
   <img src="assets/meditacao-video1.gif" alt="video-meditacao-demo" width="300">
+  <img src="assets/dark-video1.gif" alt="video-demo" width="300">
 </div>
 
 ![App Demo](assets/demo.gif)
@@ -52,7 +52,7 @@ Para utilizar o aplicativo, siga os passos abaixo:
 3. Siga as instruções na tela para utilizar as funcionalidades.
 
 ## Funcionalidades
-
+  <img src="assets/video-demo.gif" alt="video-demo" width="300">
 - [x] Gestão de Tarefas: Adicione, edite e exclua tarefas.
 - [x] Desafios Diários: Complete desafios diários para um estilo de vida saudável.
 - [x] Player para Meditação: Ouça faixas relaxantes de meditação.
