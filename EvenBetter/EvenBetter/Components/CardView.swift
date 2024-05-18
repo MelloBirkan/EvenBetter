@@ -37,9 +37,11 @@ struct CardView: View {
             .foregroundStyle(.text)
             .font(.title2)
             .bold()
+            
           
           Text(challenge.summary)
         }
+        .padding(.horizontal, 10)
       }
     })
   }

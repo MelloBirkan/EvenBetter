@@ -10,14 +10,32 @@ import SwiftUI
 struct MoodView: View {
   @Binding var moodSelected: Mood?
   @Environment(\.modelContext) private var modelContext
+  let name: String
   
   var body: some View {
     NavigationStack {
       GeometryReader(content: { geometry in
         ZStack(alignment: .bottom) {
           VStack(alignment: .center, spacing: nil, content: {
-            WelcomeHeader()
-              .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
+            ZStack(alignment: .leading) {
+              WelcomeHeader()
+                .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
+              
+              VStack(alignment: .leading, spacing: 20) {
+                Text("Olá, \(name)")
+                  .font(.title2)
+                  .bold()
+                  .offset(y: -60)
+                
+                Text("Como você está se sentindo hoje?")
+                  .font(.title3)
+                  .bold()
+                
+                Text("Selecione uma das opções abaixo.")
+              }
+              .foregroundStyle(.text)
+              .padding()
+            }
             
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
               ForEach(Mood.moodsDataToDisplay) { mood in
@@ -52,5 +70,5 @@ struct MoodView: View {
 }
 
 #Preview {
-  MoodView(moodSelected: .constant(nil))
+  MoodView(moodSelected: .constant(nil), name: "Convidado")
 }
