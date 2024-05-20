@@ -72,6 +72,131 @@ Para utilizar o aplicativo, siga os passos abaixo:
 ### CloudKit
 [CloudKit](https://developer.apple.com/documentation/cloudkit) é a framework de serviços em nuvem da Apple. Ela permite que os desenvolvedores armazenem e gerenciem dados na nuvem, facilitando a sincronização de dados entre vários dispositivos. CloudKit oferece suporte a cache offline mínimo e depende da rede e de uma conta iCloud válida para armazenar dados específicos do usuário.
 
+## Modelagem das Classes
+### Tarefas
+```swift
+enum TaskStatus {
+  case completed, uncompleted
+}
+
+@Model
+final class TaskModel {
+  var title: String
+  var summary: String
+  var hour: Date
+  var isCompleted: Bool = false
+  var color: String
+  }
+```
+### Humor
+```swift
+enum MoodType: String, Codable {
+  case feliz = "Feliz"
+  case triste = "Triste"
+  case ansioso = "Ansioso"
+  case motivado = "Motivado"
+  case bravo = "Bravo"
+  case cansado = "Cansado"
+  case all
+}
+
+struct Mood: Identifiable, Equatable {
+  let id = UUID()
+  let type: MoodType
+  var name: String {
+    return self.type.rawValue
+  }
+  let description: String
+  let image: Image
+```
+### Meditação
+```swift
+struct MeditationDO: Identifiable {
+  let id = UUID()
+  let title: String
+  let description: String
+  let duration: TimeInterval
+  let track: String
+  let image: Image
+}
+```
+### AudioManager da Meditação
+```swift
+import Foundation
+import AVKit
+
+final class AudioManager: ObservableObject {
+    var player: AVAudioPlayer?
+    @Published private(set) var isPlaying: Bool = false
+    @Published private(set) var isLooping: Bool = false
+    
+    func startPlayer(track: String, isPreview: Bool = false) {
+        guard let url = Bundle.main.url(forResource: track, withExtension: "mp3") else {
+            print("Resource not found: \(track)")
+            return
+        }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player = try AVAudioPlayer(contentsOf: url)
+            
+            if isPreview {
+                player?.prepareToPlay()
+            } else {
+                player?.play()
+                isPlaying = true
+            }
+        } catch {
+            print("Fail to initialize player", error)
+        }
+    }
+    
+    func playPause() {
+        guard let player = player else {
+            print("Instance of audio player not found")
+            return
+        }
+        
+        if player.isPlaying {
+            player.pause()
+            isPlaying = false
+        } else {
+            player.play()
+            isPlaying = true
+        }
+    }
+    
+    func stop() {
+        guard let player = player else { return }
+        
+        if player.isPlaying {
+            player.stop()
+            isPlaying = false
+        }
+    }
+    
+    func toggleLoop() {
+        guard let player = player else { return }
+        
+        player.numberOfLoops = player.numberOfLoops == 0 ? -1 : 0
+        isLooping = player.numberOfLoops != 0
+    }
+}
+```
+## Planos futuros
+ ### Lançamento do MVP (Produto Mínimo Viável)
+Estamos quase prontos para lançar nosso MVP. Atualmente, estamos na fase 0.8, o que significa que estamos muito próximos de uma versão 1.0, mas ainda há algumas áreas que precisam de melhorias e ajustes. Entre as principais tarefas pendentes estão:
+- **Sistema de Gerar Desafios:** Melhorar a lógica e adicionar mais desafios para oferecer uma experiência mais rica aos usuários.
+- **Sistema de Tarefas:** Implementar duas queries diferentes para tipos distintos de tarefas, aprimorando a funcionalidade e a usabilidade do sistema.
+### Além...
+- Fazer streaming de faixas de meditação
+- Sistema contendo mais "variaveis" para alocar a tarefa, como tipo da atividade etc...
+- Desafios de atividades físicas baseam-se no HealthKit para ter dados mais precisos
+- Nova aba contendo "ensinamentos" e motivacionais
+```swift
+print("Feito com ❤️ por Mello e Dani")
+```
 
 [swift-image]:https://img.shields.io/badge/swift-5.10-orange.svg
 [swift-url]: https://swift.org/
