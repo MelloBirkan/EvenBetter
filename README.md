@@ -18,6 +18,8 @@ EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornad
 - [Uso](#uso)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Modelagem das Classes](#modelagem-das-classes)
+- [Planos futuros](#planos-futuros)
 
 ## Demonstração
 
