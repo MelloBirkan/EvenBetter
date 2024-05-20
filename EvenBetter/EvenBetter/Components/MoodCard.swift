@@ -24,29 +24,32 @@ struct MoodCard: View {
         moodImage
           .resizable()
           .aspectRatio(contentMode: .fit)
-          .frame(width: 54)
+          .frame(width: 50)
           .clipShape(RoundedRectangle(cornerRadius: 8))
           .padding(.top)
         
         Spacer()
         
-        Text(humor)
-          .foregroundStyle(.text)
-          .bold()
-          .padding(.bottom, 1)
-        
-        Text(descricao)
-          .font(.caption2)
-          .foregroundStyle(.secondary)
-          .padding(.bottom)
-          .multilineTextAlignment(.leading)
+        VStack(alignment: .leading, spacing: 4) {
+          Text(humor)
+            .foregroundStyle(.text)
+            .bold()
+          
+          Text(descricao)
+            .font(.caption2)
+            .foregroundStyle(.secondary)
+            .lineLimit(3)
+            .frame(alignment: .leading)
+          
+          Spacer()
+        }
       }
-      .frame(width: 112, height: 151)
+      .padding(.leading)
     }
     .overlay(isSelected ? RoundedRectangle(cornerRadius: 13)
                                         .stroke(lineWidth: 6)
                                         .foregroundStyle(.accent) : nil)
-
+    .frame(width: 112, height: 151)
   }
 }
 
