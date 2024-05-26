@@ -20,15 +20,15 @@ struct ContentView: View {
       
       TaskView()
         .tabItem {
-          Label("Início", systemImage: "square.and.pencil")
+          Label("Tarefas", systemImage: "square.and.pencil")
         }
         .badge(tasks.count)
       
       MeditationList()
         .tabItem {
-          Label("Início", systemImage: "moon.stars.fill")
+          Label("Meditação", systemImage: "moon.stars.fill")
         }
-      
+        
     }
     .tint(.tabBar)
   }

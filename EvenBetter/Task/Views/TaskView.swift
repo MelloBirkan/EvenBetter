@@ -47,7 +47,7 @@ struct TaskView: View {
         ScrollView(showsIndicators: false) {
           ForEach(taskStatus == .uncompleted ? uncompletedTasks : completedTasks) { task in
             TaskRow(task: task)
-            
+              .frame(maxHeight: .infinity)
               .contextMenu(ContextMenu(menuItems: {
                 Button(action: {
                   taskBeingEdited = task

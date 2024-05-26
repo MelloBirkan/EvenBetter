@@ -9,106 +9,45 @@ import SwiftUI
 
 struct CardView: View {
   var challenge: Challenge
-  let action: () -> Void
+  
   var body: some View {
-    VStack {
-      VStack {
-        Text(challenge.name).font(.headline)
-          .offset(y: -10)
-      }
-      .padding()
-      .frame(maxWidth: .infinity)
-      .frame(height: 70)
-      .background(
-        Rectangle().fill(.ultraThinMaterial)
-          .blur(radius: 20)
-          .offset(y: -20)
-      )
-      Spacer()
-    }
-    .frame(maxWidth: .infinity)
-    .background(
+    VStack(alignment: .leading, spacing: 0, content: {
       AsyncImage(url: URL(string: challenge.image)) { image in
         image
           .resizable()
-          .aspectRatio(contentMode: .fill)
+          .aspectRatio(contentMode: .fit)
+          .clipShape(UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 13, bottomLeading: 0, bottomTrailing: 0, topTrailing: 13)))
       } placeholder: {
-        ProgressView()
-      }
-    )
-    .frame(height: 300)
-    .cornerRadius(20)
-    .overlay(
-      RoundedRectangle(cornerRadius: 20)
-        .stroke(.linearGradient(colors: [.white.opacity(0.3), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
-    )
-    .overlay(
-      VStack {
-        Text(challenge.summary)
-          .font(.subheadline)
-        
-        Spacer()
-        
-        HStack(spacing: 10) {
-          VStack(alignment: .leading) {
-            Text("Tipo").font(.subheadline).foregroundStyle(.secondary)
-            Text(challenge.mood.rawValue)
-          }
-          Divider()
-          VStack(alignment: .leading) {
-            Text("Data").font(.subheadline).foregroundStyle(.secondary)
-            Text("Hoje")
-          }
-          Divider()
-          VStack(alignment: .leading) {
-            Text("Data").font(.subheadline).foregroundStyle(.secondary)
-            Text("Hoje")
-          }
+        HStack {
+          Spacer() // Adiciona espaço antes do botão para centralizá-lo horizontalmente
+          ProgressView()
+            .frame(height: 360)
+          Spacer() // Adiciona espaço depois do botão para centralizá-lo horizontalmente
         }
-        .font(.subheadline)
-        .fontWeight(.semibold)
-        .offset(y: 10)
-        
-        Button {
-          action()
-        } label: {
-          HStack {
-            HStack {
-              Image(systemName: "play")
-            }
-            .padding()
-            .frame(height: 44)
-            .background(.linearGradient(colors: [.clear, .black.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing))
-            .overlay(
-              RoundedRectangle(cornerRadius: 20)
-                .stroke(.linearGradient(colors: [.white.opacity(0.3), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
-            )
-            .cornerRadius(20)
-          }
-          //          .onLongPressGesture {
-          //            action()
-          //          }
-        }
-        
       }
-        .frame(height: 140)
-        .padding(20)
-        .frame(maxWidth: .infinity)
-        .background(.ultraThinMaterial)
-        .cornerRadius(20)
-        .overlay(
-          RoundedRectangle(cornerRadius: 20)
-            .stroke(.linearGradient(colors: [.white.opacity(0.3), .white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing))
-        )
-        .offset(y: 110)
-        .padding(20)
-    )
+      
+      ZStack {
+        UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: 13, bottomTrailing: 13, topTrailing: 0))
+          .foregroundStyle(.moodCard)
+          .shadow(radius: 10)
+          .frame(height: 100)
+        
+        VStack(alignment: .leading, spacing: 15) {
+          Text(challenge.name)
+            .foregroundStyle(.text)
+            .font(.title2)
+            .bold()
+            
+          
+          Text(challenge.summary)
+        }
+        .padding(.horizontal, 10)
+      }
+    })
   }
 }
 
-
 #Preview {
-  CardView(challenge: Challenge.sampleData) {
-    
-  }
+  CardView(challenge: SampleDataChallenge.shared.challenge)
+    .modelContainer(SampleDataChallenge.shared.modelContainer)
 }

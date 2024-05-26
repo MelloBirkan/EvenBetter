@@ -10,14 +10,32 @@ import SwiftUI
 struct MoodView: View {
   @Binding var moodSelected: Mood?
   @Environment(\.modelContext) private var modelContext
+  let name: String
   
   var body: some View {
     NavigationStack {
       GeometryReader(content: { geometry in
         ZStack(alignment: .bottom) {
           VStack(alignment: .center, spacing: nil, content: {
-            WelcomeHeader()
-              .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
+            ZStack(alignment: .leading) {
+              WelcomeHeader()
+                .frame(width: geometry.size.width, height: geometry.size.height / 2.5)
+              
+              VStack(alignment: .leading, spacing: 20) {
+                Text("Olá, \(name)")
+                  .font(.title2)
+                  .bold()
+                  .offset(y: -60)
+                
+                Text("Como você está se sentindo hoje?")
+                  .font(.title3)
+                  .bold()
+                
+                Text("Selecione uma das opções abaixo.")
+              }
+              .foregroundStyle(.text)
+              .padding()
+            }
             
             LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: 30, content: {
               ForEach(Mood.moodsDataToDisplay) { mood in
@@ -33,20 +51,9 @@ struct MoodView: View {
             .padding(.top, -50)
             
             if (moodSelected != nil) {
-              Button(action: {
-                //                TODO: Fazer salvar mood aqui colocar um desafio dentro do array
+              ContinueButton {
                 modelContext.insert(getChallenge(mood: moodSelected!.type))
-              }, label: {
-                Text("Continuar")
-                  .bold()
-                  .foregroundStyle(.text)
-                  .padding(.horizontal, 20)
-                  .padding(.vertical, 5)
-              })
-              .padding(.top, 40)
-              .buttonStyle(.borderedProminent)
-              .buttonBorderShape(.roundedRectangle(radius: 13))
-              .tint(.accent)
+              }
             }
           })
         }
@@ -63,5 +70,5 @@ struct MoodView: View {
 }
 
 #Preview {
-  MoodView(moodSelected: .constant(nil))
+  MoodView(moodSelected: .constant(nil), name: "Convidado")
 }
