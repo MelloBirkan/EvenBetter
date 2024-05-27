@@ -191,7 +191,7 @@ final class AudioManager: ObservableObject {
 ```
 ## Planos futuros
  ### Lançamento do MVP (Produto Mínimo Viável)
-Estamos quase prontos para lançar nosso MVP. Atualmente, estamos na fase 0.8, o que significa que estamos muito próximos de uma versão 1.0, mas ainda há algumas áreas que precisam de melhorias e ajustes. Entre as principais tarefas pendentes estão:
+Estamos quase prontos para lançar nosso MVP. Atualmente, estamos na fase 0.6.1, o que significa que estamos muito próximos de uma versão 1.0, mas ainda há algumas áreas que precisam de melhorias e ajustes. Entre as principais tarefas pendentes estão:
 - **Sistema de Gerar Desafios:** Melhorar a lógica e adicionar mais desafios para oferecer uma experiência mais rica aos usuários.
 - **Sistema de Tarefas:** Implementar duas queries diferentes para tipos distintos de tarefas, aprimorando a funcionalidade e a usabilidade do sistema.
 ### Além...
