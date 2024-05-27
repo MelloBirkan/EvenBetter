@@ -6,10 +6,13 @@
 [![iOS](https://img.shields.io/badge/iOS-17%2B-blue.svg)](https://developer.apple.com/ios/)
 ![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
 
+### Atenção pessoas ocupadas que buscam melhorar o bem-estar e a produtividade!
 
+Estamos aqui para ajudar você a alcançar um equilíbrio saudável entre vida pessoal e profissional, promovendo autoconhecimento e autoaperfeiçoamento contínuos em menos de 21 dias...
 
-EvenBetter é um aplicativo de iOS que oferece suporte ao usuário em sua jornada de bem-estar pessoal e produtividade, através de um conjunto de ferramentas intuitivas e acessíveis.
+Com o evenBetter, você terá acesso a uma ferramenta única que oferece autoaperfeiçoamentos personalizados e as melhores funcionalidades integradas em um só lugar. Desafios diários baseados no seu humor, gerenciamento de tarefas eficiente e um player de meditação são apenas o começo.
 
+Transforme sua rotina e seja **ainda melhor**
 
 ## Índice
 
